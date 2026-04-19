@@ -3,61 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiz Jewelry | Bespoke Equestrian Elegance</title>
+    <title>AIZ Jewelry | Bespoke Equestrian Fine Jewelry</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">AIZ JEWELRY</div>
+            <div class="logo-container">
+                <!-- 建议将你的Logo命名为logo.png放在文件夹里 -->
+                <img src="logo.png" alt="AIZ Jewelry Logo" class="site-logo">
+            </div>
             <ul>
                 <li><a href="#about">Our Story</a></li>
-                <li><a href="#collections">Collections</a></li>
-                <li><a href="#custom">Customization</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#materials">Materials</a></li>
+                <li><a href="#custom">Bespoke Service</a></li>
+                <li><a href="#contact">Inquiry</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Bespoke Equestrian Elegance</h1>
-            <p>Crafted for riders, inspired by the horse's spirit. Discover our unique horse-themed jewelry in Stainless Steel and S925 Sterling Silver.</p>
+            <h1>Your Vision, Our Craft</h1>
+            <p>Bespoke Equestrian Jewelry crafted in Stainless Steel, S925 Silver, and Solid K-Gold (9K, 14K, 18K).</p>
             <div class="cta-buttons">
-                <a href="#collections" class="btn primary">Explore Collections</a>
-                <a href="#custom" class="btn secondary">Start Customization</a>
+                <a href="#custom" class="btn primary">Start Your Customization</a>
+                <a href="#materials" class="btn secondary">Explore Materials</a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="brand-story">
+    <section id="materials" class="collections">
         <div class="container">
-            <h2>The Spirit of the Equine</h2>
-            <p>At Aiz Jewelry, we transform the profound connection between rider and horse into wearable art. Every piece is a testament to grace, strength, and heritage.</p>
-        </div>
-    </section>
-
-    <section id="collections" class="collections">
-        <div class="container">
-            <h2>Our Materials</h2>
+            <h2>Expertly Crafted Materials</h2>
             <div class="collection-grid">
+                <!-- 不锈钢 -->
                 <div class="collection-card">
-                    <h3>The Bold Series (Stainless Steel)</h3>
-                    <p>Designed for durability and a bold, modern look. High-quality PVD plating for a vintage gold effect that never fades.</p>
+                    <h3>Stainless Steel</h3>
+                    <p>Bold and unyielding. Perfect for heavy, substantial designs with vintage PVD gold plating that never fades.</p>
                     <ul class="features">
-                        <li>Natural Steel (Raw & Bold)</li>
-                        <li>PVD 18K Gold (Luxury Vintage)</li>
-                        <li>No tarnish & Hypoallergenic</li>
+                        <li>Natural Polished Steel</li>
+                        <li>Vintage PVD 18K Gold</li>
+                        <li>Durable & Hypoallergenic</li>
                     </ul>
                 </div>
+                <!-- 纯银 -->
                 <div class="collection-card">
-                    <h3>The Refined Series (S925 Silver)</h3>
-                    <p>Meticulously crafted for the finest details. Lightweight, precious metal feel with premium plating options.</p>
+                    <h3>S925 Sterling Silver</h3>
+                    <p>Refined elegance for intricate motifs. Finished with premium rhodium or gold plating for a fine jewelry feel.</p>
                     <ul class="features">
-                        <li>Rhodium Plated (White Gold Sheen)</li>
-                        <li>14K & 18K Yellow Gold Plated</li>
-                        <li>Intricate & Demi-fine designs</li>
+                        <li>Rhodium (White Gold look)</li>
+                        <li>14K & 18K Yellow Gold Plating</li>
+                        <li>High-detail Craftsmanship</li>
+                    </ul>
+                </div>
+                <!-- K金 -->
+                <div class="collection-card highlighted">
+                    <h3>Solid K-Gold</h3>
+                    <p>The ultimate investment in your equestrian story. Available in 9K, 14K, and 18K solid gold for eternal brilliance.</p>
+                    <ul class="features">
+                        <li>9K / 14K / 18K Solid Gold</li>
+                        <li>Heirloom Quality</li>
+                        <li>Bespoke Commissions Only</li>
                     </ul>
                 </div>
             </div>
@@ -66,40 +74,38 @@
 
     <section id="custom" class="customization">
         <div class="container">
-            <div class="custom-content">
-                <h2>Your Vision, Our Craft</h2>
-                <p>Looking for something truly one-of-a-kind? We specialize in bespoke designs—from silhouette necklaces to custom-engraved bit bracelets.</p>
-                <div class="steps">
-                    <div class="step"><span>1</span> Design Consultation</div>
-                    <div class="step"><span>2</span> Material Selection</div>
-                    <div class="step"><span>3</span> Design Approval</div>
-                    <div class="step"><span>4</span> Handcrafting & Delivery</div>
-                </div>
+            <h2>The Art of Bespoke</h2>
+            <p>We specialize in bringing your unique equine vision to life—from personalized silhouettes to professional bit-inspired designs.</p>
+            <div class="steps">
+                <div class="step"><span>1</span>Design Discovery</div>
+                <div class="step"><span>2</span>Material Engineering</div>
+                <div class="step"><span>3</span>3D Draft & Approval</div>
+                <div class="step"><span>4</span>Artisan Creation</div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get in Touch</h2>
+            <h2>Global Inquiry</h2>
+            <p>Serving riders and horse lovers across Europe, Australia, and North America.</p>
             <form id="contact-form">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
-                <select>
-                    <option value="">Country/Region</option>
-                    <option value="USA">USA</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Other">Other</option>
+                <select required>
+                    <option value="">Select Material</option>
+                    <option value="Steel">Stainless Steel</option>
+                    <option value="Silver">S925 Sterling Silver</option>
+                    <option value="Gold">Solid K-Gold (9K/14K/18K)</option>
                 </select>
-                <textarea placeholder="Tell us about your custom request..." required></textarea>
-                <button type="submit" class="btn primary">Send Inquiry</button>
+                <textarea placeholder="Describe your custom idea..." required></textarea>
+                <button type="submit" class="btn primary">Send Request</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Aiz Jewelry. Dedicated to the Equestrian Soul.</p>
+        <p>&copy; 2026 AIZ Jewelry. Dedicated to the Equestrian Soul.</p>
     </footer>
 
     <script src="script.js"></script>
