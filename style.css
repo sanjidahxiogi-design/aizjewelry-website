@@ -946,8 +946,8 @@ nav {
 .contact-item span {
     display: block;
     font-size: 0.68rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+    text-transform: none;
+    letter-spacing: 1px;
     color: var(--primary);
     margin-bottom: 12px;
     font-weight: 900;
@@ -964,18 +964,18 @@ nav {
 .whatsapp-secure-btn {
     display: inline-flex;
     align-items: center;
-    gap: 15px;
-    padding: 18px 35px;
+    gap: 12px;
+    padding: 10px 22px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.2);
     color: #fff;
     text-decoration: none;
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     border-radius: 0;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 3px;
-    font-weight: 800;
+    text-transform: none;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .whatsapp-secure-btn:hover {
