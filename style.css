@@ -391,11 +391,137 @@ nav {
     margin-top: 40px;
 }
 
-.back-to-top a {
+/* Category Tabs */
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.category-tab {
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--light-text);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.category-tab:hover, .category-tab.active {
+    border-color: var(--primary);
     color: var(--primary);
-    text-decoration: none;
+}
+
+.category-tab.active {
+    background: rgba(197, 160, 89, 0.05);
+}
+
+/* Product Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    border-color: var(--primary);
+}
+
+.product-card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #fdfaf5;
+}
+
+.product-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-card:hover .product-card-image img {
+    transform: scale(1.1);
+}
+
+.product-card-info {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.product-card-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.product-card-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.product-card-info p {
     font-size: 0.85rem;
-    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.product-card-features {
+    list-style: none;
+    font-size: 0.75rem;
+    color: var(--text);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+}
+
+.product-card-features li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-card-features li::before {
+    content: "•";
+    color: var(--primary);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Category Badge Update */
+.category-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.category-header .product-category-title {
+    margin-bottom: 20px;
 }
 
 /* MOQ Table - Premium Styling */
