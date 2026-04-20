@@ -432,10 +432,11 @@ nav {
 .product-card {
     background: var(--white);
     border: 1px solid var(--border);
-    transition: all 0.3s;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    opacity: 1;
 }
 
 .product-card:hover {
