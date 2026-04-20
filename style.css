@@ -119,7 +119,7 @@ nav {
 
 /* Hero - Restored to "Beautiful" double-image layout */
 .hero {
-    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(26,26,26,0.6) 100%), url('https://sc01.alicdn.com/kf/Hd5f46034d87f411e9d99edaadad8c1c8W.jpg') no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(26,26,26,0.6) 100%), url('https://sc01.alicdn.com/kf/Hc747858ec0994fa3b3d273f74a5e8542R.jpg') no-repeat center center/cover;
     color: var(--white);
     padding: 120px 0;
     position: relative;
@@ -163,7 +163,7 @@ nav {
 }
 
 .hero-image-box {
-    background: url('https://sc01.alicdn.com/kf/Hd5f46034d87f411e9d99edaadad8c1c8W.jpg') no-repeat center center/cover;
+    background: url('https://sc01.alicdn.com/kf/Hc747858ec0994fa3b3d273f74a5e8542R.jpg') no-repeat center center/cover;
     height: 500px;
     width: 100%;
     border: 1px solid rgba(197, 160, 89, 0.3);
