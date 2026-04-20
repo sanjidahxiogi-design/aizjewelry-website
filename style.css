@@ -874,6 +874,7 @@ footer p {
     .contact-info, .inquiry-form { padding: 40px; }
     .about-image-side img { height: 400px; }
     .about-experience-badge { bottom: 20px; right: 20px; padding: 20px; }
+    .custom-path-grid, .precautions-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 576px) {
@@ -881,4 +882,91 @@ footer p {
     .hero h1 { font-size: 2.2rem; }
     .nav-links { display: none; }
     .floating-actions { bottom: 20px; right: 20px; }
+}
+
+/* Customization Path & Precautions */
+.custom-path-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.path-step {
+    text-align: center;
+    padding: 30px;
+    background: #fdfaf5;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+}
+
+.path-step:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.path-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.path-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.path-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--light-text);
+}
+
+.precautions-box {
+    background: #fff;
+    border: 2px solid #f0e6d2;
+    padding: 40px;
+    border-radius: 4px;
+}
+
+.precautions-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    color: var(--primary);
+}
+
+.precautions-header h3 {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.precautions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.precaution-item strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark);
+    font-size: 0.95rem;
+}
+
+.precaution-item p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--light-text);
+    line-height: 1.5;
 }
