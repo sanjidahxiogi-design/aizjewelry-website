@@ -59,21 +59,20 @@ h1, h2, h3, h4 {
 /* Header */
 header {
     background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(35px) saturate(200%);
-    -webkit-backdrop-filter: blur(35px) saturate(200%);
-    padding: 20px 0;
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-top: 4px solid var(--primary);
+    border-top: 3px solid var(--primary);
     border-bottom: 1px solid rgba(0,0,0,0.03);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
-    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 header:hover {
     background: rgba(255, 255, 255, 1);
-    padding: 24px 0;
 }
 
 nav {
@@ -85,39 +84,37 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    gap: 25px;
-    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    gap: 15px;
 }
 
 .logo img {
-    height: 95px;
-    filter: drop-shadow(0 12px 30px rgba(0,0,0,0.12));
+    height: 65px;
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.08));
     transition: all 0.6s ease;
 }
 
 .logo:hover img {
-    transform: rotate(-4deg) scale(1.08);
+    transform: rotate(-4deg) scale(1.05);
 }
 
 .logo span {
     font-weight: 900;
-    letter-spacing: 8px;
+    letter-spacing: 4px;
     color: var(--dark);
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     text-transform: uppercase;
     font-family: 'Playfair Display', serif;
     position: relative;
     background: linear-gradient(135deg, #000 0%, var(--primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 60px;
+    gap: 35px;
 }
 
 .nav-links a {
@@ -127,9 +124,9 @@ nav {
     font-weight: 800;
     transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     position: relative;
-    padding: 12px 0;
+    padding: 8px 0;
 }
 
 .nav-links a::after {
@@ -138,10 +135,9 @@ nav {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 3px;
+    height: 2px;
     background: var(--primary);
     transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-    box-shadow: 0 2px 10px rgba(197, 160, 89, 0.3);
 }
 
 .nav-links a:hover::after {
@@ -150,17 +146,15 @@ nav {
 
 .nav-links a:hover {
     color: var(--primary);
-    transform: translateY(-3px);
-    letter-spacing: 6px;
 }
 
 .btn-nav {
     background: var(--dark);
     color: var(--white) !important;
-    padding: 18px 42px;
+    padding: 12px 28px;
     border-radius: 0;
     font-size: 0.7rem !important;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     font-weight: 900 !important;
     border: 1px solid var(--dark);
     position: relative;
@@ -188,7 +182,7 @@ nav {
 .btn-nav:hover {
     color: var(--white) !important;
     border-color: var(--primary);
-    box-shadow: 0 20px 40px rgba(197, 160, 89, 0.4);
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
 }
 
 /* Hero - Restored to "Beautiful" double-image layout */
@@ -868,7 +862,7 @@ nav {
 .contact-card {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    box-shadow: 0 120px 240px rgba(0,0,0,0.25);
+    box-shadow: 0 50px 100px rgba(0,0,0,0.15);
     border-radius: 0;
     overflow: hidden;
     background: #fff;
@@ -877,7 +871,7 @@ nav {
 }
 
 .contact-info {
-    padding: 160px 100px;
+    padding: 100px 70px;
     background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url('https://images.unsplash.com/photo-1573408302185-9111fb330450?auto=format&fit=crop&q=80&w=1200');
     background-size: cover;
     background-position: center;
@@ -896,18 +890,18 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 30% 30%, rgba(197, 160, 89, 0.15) 0%, transparent 60%);
+    background: radial-gradient(circle at 30% 30%, rgba(197, 160, 89, 0.1), transparent 60%);
     pointer-events: none;
 }
 
 .contact-info::after {
     content: "AIZ";
     position: absolute;
-    bottom: -80px;
-    right: -40px;
-    font-size: 30rem;
+    bottom: -40px;
+    right: -20px;
+    font-size: 15rem;
     font-weight: 900;
-    color: rgba(255,255,255,0.03);
+    color: rgba(255,255,255,0.02);
     font-family: 'Playfair Display', serif;
     pointer-events: none;
     line-height: 1;
@@ -916,21 +910,20 @@ nav {
 .contact-info h2 {
     color: #fff;
     font-family: 'Playfair Display', serif;
-    font-size: 5.5rem;
-    margin-bottom: 45px;
-    line-height: 0.95;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    line-height: 1.1;
     font-weight: 800;
-    letter-spacing: -3px;
-    text-shadow: 0 15px 45px rgba(0,0,0,0.3);
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .contact-info p {
-    color: rgba(255,255,255,0.5);
-    line-height: 2.6;
-    font-size: 1.2rem;
-    margin-bottom: 80px;
+    color: rgba(255,255,255,0.6);
+    line-height: 2;
+    font-size: 1.05rem;
+    margin-bottom: 50px;
     font-weight: 300;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
     max-width: 90%;
 }
 
@@ -940,49 +933,48 @@ nav {
 }
 
 .contact-item {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     border-left: 2px solid var(--primary);
-    padding-left: 35px;
+    padding-left: 25px;
     transition: all 0.5s ease;
 }
 
 .contact-item:hover {
-    padding-left: 45px;
-    background: rgba(197, 160, 89, 0.05);
+    padding-left: 30px;
 }
 
 .contact-item span {
     display: block;
     font-size: 0.68rem;
     text-transform: uppercase;
-    letter-spacing: 7px;
+    letter-spacing: 4px;
     color: var(--primary);
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-weight: 900;
 }
 
 .contact-item strong {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: #fff;
     font-family: 'Playfair Display', serif;
-    letter-spacing: 2.5px;
+    letter-spacing: 1px;
 }
 
 .whatsapp-secure-btn {
     display: inline-flex;
     align-items: center;
-    gap: 25px;
-    padding: 24px 50px;
+    gap: 15px;
+    padding: 18px 35px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.2);
     color: #fff;
     text-decoration: none;
-    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     border-radius: 0;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 5px;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
     font-weight: 800;
 }
 
@@ -990,8 +982,7 @@ nav {
     background: #fff;
     color: #000;
     border-color: #fff;
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    transform: translateY(-5px);
 }
 
 .whatsapp-secure-btn svg {
@@ -1001,11 +992,10 @@ nav {
 
 .whatsapp-secure-btn:hover svg {
     color: #000;
-    transform: scale(1.2);
 }
 
 .inquiry-form {
-    padding: 160px 120px;
+    padding: 100px 80px;
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -1013,16 +1003,16 @@ nav {
 }
 
 .form-group {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .inquiry-form label {
     display: block;
     font-size: 0.68rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     color: #aaa;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-weight: 900;
 }
 
@@ -1031,11 +1021,11 @@ nav {
 .inquiry-form textarea {
     width: 100%;
     border: none;
-    border-bottom: 2px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
     border-radius: 0;
-    padding: 22px 0;
-    font-size: 1.15rem;
-    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    padding: 15px 0;
+    font-size: 1.05rem;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     background: transparent;
     color: var(--dark);
     font-family: inherit;
@@ -1051,31 +1041,31 @@ nav {
 .inquiry-form textarea:focus {
     border-bottom-color: var(--primary);
     outline: none;
-    padding-left: 25px;
-    letter-spacing: 2px;
+    padding-left: 15px;
+    letter-spacing: 1px;
 }
 
 .inquiry-form .btn.primary {
     width: 100%;
-    padding: 36px;
-    margin-top: 60px;
-    letter-spacing: 12px;
+    padding: 24px;
+    margin-top: 40px;
+    letter-spacing: 8px;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     border-radius: 0;
     background: var(--dark);
     color: var(--white);
     border: 1px solid var(--dark);
-    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     cursor: pointer;
 }
 
 .inquiry-form .btn.primary:hover {
     background: var(--primary);
     border-color: var(--primary);
-    transform: translateY(-15px);
-    box-shadow: 0 40px 80px rgba(197, 160, 89, 0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(197, 160, 89, 0.3);
 }
 
 /* Floating Actions */
