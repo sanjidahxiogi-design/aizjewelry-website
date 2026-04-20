@@ -555,12 +555,7 @@
             const material = document.getElementById('form-material').value;
             const message = document.getElementById('form-message').value;
 
-            if (!name || !email || !message) {
-                alert('Please fill in the required fields (Name, Email, and Message).');
-                return;
-            }
-
-            const subject = encodeURIComponent(`Inquiry from ${name} - ${brand} Jewelry`);
+            const subject = encodeURIComponent(`Jewelry Inquiry - ${brand || 'New Project'}`);
             const body = encodeURIComponent(
                 `Full Name: ${name}\n` +
                 `Brand Name: ${brand}\n` +
