@@ -1224,3 +1224,53 @@ footer p {
     color: var(--light-text);
     line-height: 1.5;
 }
+
+/* Language Switcher */
+.lang-switcher {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.current-lang {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: 2px;
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    min-width: 120px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-radius: 2px;
+}
+
+.lang-switcher:hover .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lang-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    color: var(--dark) !important;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.lang-dropdown a:hover {
+    background: rgba(197, 160, 89, 0.1);
+    color: var(--primary) !important;
+}
