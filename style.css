@@ -21,6 +21,11 @@ html, body {
     width: 100%;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--text);
@@ -1290,13 +1295,23 @@ footer p {
 
     /* Header */
     header { padding: 10px 0; }
-    .logo img { height: 35px; }
-    .logo span { font-size: 0.7rem; letter-spacing: 1px; }
-    .nav-right { display: flex !important; align-items: center; gap: 8px; }
+    nav { gap: 10px; }
+    .logo { gap: 8px; flex-shrink: 1; min-width: 0; }
+    .logo img { height: 28px; }
+    .logo span { font-size: 0.6rem; letter-spacing: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .nav-right { display: flex !important; align-items: center; gap: 10px; flex-shrink: 0; }
     .nav-links { display: none !important; } 
-    .btn-nav { padding: 8px 12px; font-size: 0.6rem !important; min-width: 90px; text-align: center; }
-    .lang-switcher { display: flex !important; }
-    .current-lang { padding: 4px 6px; font-size: 0.65rem; }
+    .btn-nav { padding: 8px 10px; font-size: 0.55rem !important; min-width: 80px; text-align: center; flex-shrink: 0; }
+    
+    .lang-switcher { 
+        display: flex !important; 
+        background: rgba(197, 160, 89, 0.1);
+        padding: 5px 8px;
+        border-radius: 4px;
+        border: 1px solid var(--primary);
+        flex-shrink: 0;
+    }
+    .current-lang { padding: 0; font-size: 0.65rem; color: var(--primary); font-weight: 800; border: none; }
     .lang-dropdown { min-width: 100px; right: 0; }
 
     /* Hero Section */
@@ -1330,10 +1345,28 @@ footer p {
     /* Custom Path / Workflow */
     .process-steps, .custom-path-grid, .precautions-grid { 
         grid-template-columns: 1fr !important; 
-        gap: 20px; 
+        gap: 25px; 
+        padding: 0 10px;
     }
-    .path-step, .step { padding: 20px; }
-
+    .step { 
+        padding: 0 !important; 
+        border-radius: 8px; 
+        background: #fff; 
+        overflow: visible !important; 
+    }
+    .step-img-wrapper { 
+        height: 200px !important; 
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100% !important;
+    }
+    .step-img-wrapper img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
     /* MOQ Table */
     .table-wrapper { margin-top: 20px; }
     .moq-table { min-width: 500px; }
