@@ -391,8 +391,66 @@ nav {
     margin-top: 40px;
 }
 
-/* Category Tabs */
-.category-tabs {
+/* Sustainability Section */
+.sustainability-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.sus-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.sus-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.sus-image {
+    flex: 1;
+    height: 350px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.sus-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.sus-item:hover .sus-image img {
+    transform: scale(1.05);
+}
+
+.sus-content {
+    flex: 1;
+}
+
+.sus-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.sus-content p {
+    color: var(--light-text);
+    line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+    .sus-item, .sus-item.reverse {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .sus-image {
+        width: 100%;
+        height: 300px;
+    }
+}
     display: flex;
     justify-content: center;
     gap: 15px;
