@@ -404,7 +404,7 @@ nav {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.45); /* Elegant dark overlay */
+    background: rgba(0, 0, 0, 0.25); /* Lightened overlay to make the natural green pop more */
     backdrop-filter: blur(5px); /* Atmospheric blur as requested */
     z-index: 1;
 }
