@@ -362,19 +362,123 @@ nav {
     font-weight: 700;
 }
 
-/* About Section */
-.about-text-rich p {
-    margin-bottom: 20px;
-    font-size: 1.05rem;
-    color: var(--light-text);
-    max-width: 900px;
+/* MOQ Table - Premium Styling */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    border-radius: 8px;
 }
 
-.about-text-rich strong {
-    color: var(--dark);
-    display: block;
-    margin-top: 30px;
+.moq-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    min-width: 600px;
+}
+
+.moq-table th {
+    background: var(--dark);
+    color: var(--primary);
+    text-align: left;
+    padding: 20px;
+    font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.moq-table td {
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+}
+
+.moq-table tr:last-child td {
+    border-bottom: none;
+}
+
+.moq-table tr:hover {
+    background: #fdfaf5;
+}
+
+.moq-table strong {
+    color: var(--dark);
+}
+
+/* About Section Refinement */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.about-text-rich {
+    border-left: 3px solid var(--primary);
+    padding-left: 40px;
+}
+
+.about-text-rich p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--light-text);
+    text-align: justify;
+}
+
+.about-highlights {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.h-item strong {
+    font-size: 2.5rem;
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+    display: block;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.h-item span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--light-text);
+    font-weight: 600;
+}
+
+.product-category-title {
+    font-size: 2.2rem;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.product-category-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+}
+
+.category-badge {
+    text-align: center;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-top: 60px;
+    margin-bottom: -70px;
 }
 
 /* Contact Card */
