@@ -292,62 +292,92 @@ nav {
 .product-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 80px;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
+    padding: 0;
 }
 
-.product-item.reverse {
-    direction: rtl;
+.product-item.reverse .product-image {
+    order: 2;
 }
 
 .product-item.reverse .product-text {
-    direction: ltr;
+    order: 1;
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+    background: #fdfaf5;
 }
 
 .product-image img {
     width: 100%;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-radius: 0;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-item:hover .product-image img {
+    transform: scale(1.05);
 }
 
 .product-text h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: var(--primary);
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    color: var(--dark);
+    font-family: 'Playfair Display', serif;
 }
 
 .product-text h4 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    margin-bottom: 10px;
-    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    color: var(--dark);
+    color: var(--primary);
+    letter-spacing: 3px;
 }
 
 .product-text p {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     color: var(--light-text);
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 .product-features {
     list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-top: 1px solid var(--border);
+    padding-top: 30px;
 }
 
 .product-features li {
     position: relative;
-    padding-left: 25px;
-    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .product-features li::before {
-    content: "✓";
+    content: "";
     position: absolute;
     left: 0;
-    color: var(--primary);
-    font-weight: bold;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    transform: rotate(45deg);
 }
 
 .back-to-top {
