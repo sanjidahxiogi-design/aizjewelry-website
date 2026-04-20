@@ -747,11 +747,19 @@ nav {
 
 .about-image-stack img {
     width: 100%;
-    height: auto;
     border-radius: 2px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border: 1px solid rgba(197, 160, 89, 0.2);
     display: block;
+    object-fit: cover;
+}
+
+.img-main {
+    height: 420px;
+}
+
+.img-sub {
+    height: 320px;
 }
 
 .about-text-side {
