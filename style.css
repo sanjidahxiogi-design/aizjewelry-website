@@ -117,9 +117,9 @@ nav {
     border-radius: 4px;
 }
 
-/* Hero - Restored to 2-column "Beautiful" layout */
+/* Hero - Restored to "Beautiful" double-image layout */
 .hero {
-    background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(26,26,26,0.7) 100%);
+    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(26,26,26,0.6) 100%), url('https://sc01.alicdn.com/kf/Hd5f46034d87f411e9d99edaadad8c1c8W.jpg') no-repeat center center/cover;
     color: var(--white);
     padding: 120px 0;
     position: relative;
