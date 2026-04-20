@@ -1,3 +1,18 @@
+// Language Switcher Toggle for Mobile
+document.querySelectorAll('.lang-switcher').forEach(switcher => {
+    switcher.addEventListener('click', function(e) {
+        if (window.innerWidth <= 992) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+        }
+    });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function() {
+    document.querySelectorAll('.lang-switcher').forEach(s => s.classList.remove('active'));
+});
+
 // Category Filtering Logic
 document.querySelectorAll('.category-tab').forEach(tab => {
     tab.addEventListener('click', function() {
