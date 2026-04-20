@@ -420,6 +420,38 @@ nav {
     font-size: 1.1rem;
 }
 
+.copy-box {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.copy-hint {
+    font-size: 0.65rem;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 2px 6px;
+    margin-left: 10px;
+    border-radius: 3px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    opacity: 0.7;
+}
+
+.copy-box:hover .copy-hint {
+    opacity: 1;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.copy-hint.success {
+    background: #25d366;
+    border-color: #25d366;
+    color: white;
+    opacity: 1;
+}
+
 .inquiry-form {
     background: var(--white);
     padding: 60px;

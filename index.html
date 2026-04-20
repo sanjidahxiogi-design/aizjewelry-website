@@ -457,7 +457,10 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <span>Email</span>
-                            <strong>sales@aizjewelry.com</strong>
+                            <div class="copy-box" onclick="copyEmail('sales@aizjewelry.com', this)">
+                                <strong>sales@aizjewelry.com</strong>
+                                <span class="copy-hint">Click to Copy</span>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <span>WhatsApp</span>
@@ -563,6 +566,20 @@
             );
 
             window.location.href = `mailto:sales@aizjewelry.com?subject=${subject}&body=${body}`;
+        }
+
+        function copyEmail(text, element) {
+            navigator.clipboard.writeText(text).then(() => {
+                const hint = element.querySelector('.copy-hint');
+                const originalText = hint.innerText;
+                hint.innerText = 'Copied!';
+                hint.classList.add('success');
+                
+                setTimeout(() => {
+                    hint.innerText = originalText;
+                    hint.classList.remove('success');
+                }, 2000);
+            });
         }
     </script>
 </body>
