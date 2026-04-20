@@ -391,66 +391,79 @@ nav {
     margin-top: 40px;
 }
 
-/* Sustainability Section */
+/* Sustainability Section Redesign */
+#sustainability {
+    position: relative;
+    background: url('https://sc01.alicdn.com/kf/H616ef75b4ff8467e9f205fbbcc2ddcbfI.png') center/cover no-repeat fixed;
+    color: white;
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+#sustainability::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.45); /* Elegant dark overlay */
+    backdrop-filter: blur(5px); /* Atmospheric blur as requested */
+    z-index: 1;
+}
+
+#sustainability .container {
+    position: relative;
+    z-index: 2;
+}
+
+#sustainability .section-header h2, 
+#sustainability .section-header p {
+    color: white;
+}
+
 .sustainability-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
 .sus-item {
     display: flex;
-    align-items: center;
-    gap: 60px;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
 }
 
-.sus-item.reverse {
-    flex-direction: row-reverse;
-}
-
-.sus-image {
-    flex: 1;
-    height: 350px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-}
-
-.sus-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-}
-
-.sus-item:hover .sus-image img {
-    transform: scale(1.05);
-}
-
-.sus-content {
-    flex: 1;
+.sus-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
 }
 
 .sus-content h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
+    color: var(--primary);
 }
 
 .sus-content p {
-    color: var(--light-text);
-    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 992px) {
-    .sus-item, .sus-item.reverse {
-        flex-direction: column;
-        gap: 30px;
+    .sustainability-grid {
+        grid-template-columns: 1fr;
     }
-    .sus-image {
-        width: 100%;
-        height: 300px;
+    #sustainability {
+        background-attachment: scroll; /* Better performance on mobile */
     }
 }
+
+.category-tabs {
     display: flex;
     justify-content: center;
     gap: 15px;
