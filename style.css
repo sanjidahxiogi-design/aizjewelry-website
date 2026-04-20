@@ -740,33 +740,18 @@ nav {
 }
 
 .about-image-stack {
-    position: relative;
-    padding-bottom: 80px;
-    padding-right: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .about-image-stack img {
-    border-radius: 2px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.img-main {
-    width: 90%;
+    width: 100%;
     height: auto;
-    display: block;
-    position: relative;
-    z-index: 1;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border: 1px solid rgba(197, 160, 89, 0.2);
-}
-
-.img-sub {
-    position: absolute;
-    width: 70%;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    border: 12px solid #fff;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+    display: block;
 }
 
 .about-text-side {
