@@ -739,45 +739,38 @@ nav {
     top: 120px;
 }
 
-.about-image-side img {
-    width: 100%;
+.about-image-stack {
+    position: relative;
+    padding-bottom: 80px;
+    padding-right: 80px;
+}
+
+.about-image-stack img {
+    border-radius: 2px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.img-main {
+    width: 90%;
     height: auto;
-    min-height: 500px;
-    object-fit: cover;
-    box-shadow: 40px 40px 0px rgba(197, 160, 89, 0.1);
-    border: 1px solid rgba(197, 160, 89, 0.3);
-}
-
-.about-experience-badge {
-    position: absolute;
-    bottom: -20px;
-    left: -20px;
-    background: var(--dark);
-    color: var(--white);
-    padding: 25px 35px;
-    text-align: center;
-    box-shadow: 20px 20px 40px rgba(0,0,0,0.15);
-    z-index: 2;
-    border-left: 5px solid var(--primary);
-}
-
-.about-experience-badge strong {
-    font-size: 2.8rem;
-    font-family: 'Playfair Display', serif;
-    color: var(--primary);
     display: block;
-    line-height: 1;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(197, 160, 89, 0.2);
 }
 
-.about-experience-badge span {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
+.img-sub {
+    position: absolute;
+    width: 70%;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    border: 12px solid #fff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
 }
 
 .about-text-side {
-    padding-top: 20px;
+    padding-top: 0px;
 }
 
 .about-text-side h2 {
@@ -946,8 +939,8 @@ nav {
 .contact-item span {
     display: block;
     font-size: 0.68rem;
-    text-transform: none;
-    letter-spacing: 1px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
     color: var(--primary);
     margin-bottom: 12px;
     font-weight: 900;
@@ -964,18 +957,18 @@ nav {
 .whatsapp-secure-btn {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 10px 22px;
+    gap: 15px;
+    padding: 18px 35px;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.2);
     color: #fff;
     text-decoration: none;
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     border-radius: 0;
-    text-transform: none;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    font-weight: 800;
 }
 
 .whatsapp-secure-btn:hover {
@@ -1141,8 +1134,7 @@ footer p {
     .process-steps { grid-template-columns: 1fr 1fr; }
     .product-item.reverse { direction: ltr; }
     .contact-info, .inquiry-form { padding: 40px; }
-    .about-image-side img { height: 400px; }
-    .about-experience-badge { bottom: 20px; right: 20px; padding: 20px; }
+    .about-image-side img { height: auto; }
     .custom-path-grid, .precautions-grid { grid-template-columns: 1fr; }
 }
 
