@@ -295,7 +295,13 @@ nav {
     gap: 80px;
     align-items: center;
     margin-bottom: 120px;
-    padding: 0;
+    padding: 30px;
+    transition: all 0.4s ease;
+    border-radius: 8px;
+}
+
+.product-item:hover {
+    background: #fcf8f0;
 }
 
 .product-item.reverse .product-image {
