@@ -422,44 +422,62 @@ nav {
 .sustainability-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .sus-item {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 40px 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 60px 35px;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.sus-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 2px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.6s;
 }
 
 .sus-item:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.sus-item:hover::before {
+    transform: scaleX(1);
 }
 
 .sus-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
-    color: var(--primary);
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .sus-content p {
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 300;
+    margin: 0;
 }
 
 @media (max-width: 992px) {
     .sustainability-grid {
-        grid-template-columns: 1fr;
-    }
-    #sustainability {
-        background-attachment: scroll; /* Better performance on mobile */
+        flex-direction: column;
+        gap: 40px;
     }
 }
 
