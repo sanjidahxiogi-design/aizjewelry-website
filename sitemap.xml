@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- English -->
+  <url>
+    <loc>https://www.aizjewelry.com/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aizjewelry.com/"/>
+  </url>
+
+  <!-- Spanish -->
+  <url>
+    <loc>https://www.aizjewelry.com/es/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
+  </url>
+
+  <!-- French -->
+  <url>
+    <loc>https://www.aizjewelry.com/fr/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
+  </url>
+
+  <!-- German -->
+  <url>
+    <loc>https://www.aizjewelry.com/de/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
+  </url>
+
+  <!-- Portuguese -->
+  <url>
+    <loc>https://www.aizjewelry.com/pt/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
+  </url>
+
+  <!-- Japanese -->
+  <url>
+    <loc>https://www.aizjewelry.com/jp/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
+  </url>
+
+  <!-- Korean -->
+  <url>
+    <loc>https://www.aizjewelry.com/kr/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
+  </url>
+
+</urlset>
