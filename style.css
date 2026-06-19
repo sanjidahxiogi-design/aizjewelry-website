@@ -27,7 +27,8 @@ img {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-variant-numeric: lining-nums;
     color: var(--text);
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -37,7 +38,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     color: var(--dark);
     line-height: 1.2;
 }
@@ -137,7 +138,7 @@ nav {
     color: var(--dark);
     font-size: 1.4rem;
     text-transform: uppercase;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     position: relative;
     background: linear-gradient(135deg, #000 0%, var(--primary) 100%);
     -webkit-background-clip: text;
@@ -442,11 +443,12 @@ nav {
     font-size: 2.4rem;
     margin-bottom: 25px;
     color: var(--dark);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
 }
 
 .product-text h4 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-variant-numeric: lining-nums;
     font-weight: 600;
     margin-bottom: 15px;
     font-size: 0.8rem;
@@ -564,7 +566,7 @@ nav {
 }
 
 .sus-content h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-size: 1.6rem;
     color: #fff;
     margin-bottom: 25px;
@@ -573,7 +575,8 @@ nav {
 }
 
 .sus-content p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-variant-numeric: lining-nums;
     font-size: 0.85rem;
     line-height: 2;
     color: rgba(255, 255, 255, 0.75);
@@ -674,7 +677,8 @@ nav {
 }
 
 .product-card-info h4 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-variant-numeric: lining-nums;
     font-size: 0.7rem;
     color: var(--primary);
     text-transform: uppercase;
@@ -763,7 +767,7 @@ nav {
     color: var(--primary);
     text-align: left;
     padding: 20px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -830,7 +834,7 @@ nav {
 .about-text-side h2 {
     font-size: 3.2rem;
     margin-bottom: 40px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     line-height: 1.1;
     color: var(--dark);
 }
@@ -846,7 +850,7 @@ nav {
 .h-item-new strong {
     font-size: 2.2rem;
     color: var(--primary);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     display: block;
     margin-bottom: 5px;
 }
@@ -949,14 +953,14 @@ nav {
     font-size: 15rem;
     font-weight: 900;
     color: rgba(255,255,255,0.02);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     pointer-events: none;
     line-height: 1;
 }
 
 .contact-info h2 {
     color: #fff;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     font-size: 3.5rem;
     margin-bottom: 30px;
     line-height: 1.1;
@@ -1004,7 +1008,7 @@ nav {
     font-size: 1.4rem;
     font-weight: 400;
     color: #fff;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bodoni Moda', serif;
     letter-spacing: 1px;
 }
 
