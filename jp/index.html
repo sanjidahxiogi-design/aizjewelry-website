@@ -691,35 +691,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="inquiry-form">
-                    <div class="form-group">
-                        <label>氏名</label>
-                        <input type="text" id="form-name" placeholder="ご担当者名">
-                    </div>
-                    <div class="form-group">
-                        <label>ブランド名</label>
-                        <input type="text" id="form-brand" placeholder="貴社ブランド名">
-                    </div>
+                <form class="inquiry-form" action="https://formsubmit.co/sales@aizjewelry.com" method="POST" enctype="multipart/form-data" onsubmit="gtag('event', 'form_submission_web', {'event_category': 'Inquiry', 'event_label': 'FormSubmit'});">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_next" value="https://www.aizjewelry.com/jp/thank-you.html">
+                    <input type="hidden" name="_subject" value="New Jewelry Project Inquiry - AizJewelry.com">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+
                     <div class="form-group">
                         <label>ビジネスメール</label>
-                        <input type="email" id="form-email" placeholder="業務用メールアドレス">
+                        <input type="email" name="email" id="form-email" placeholder="プロフェッショナルなビジネスメール" required>
                     </div>
                     <div class="form-group">
-                        <label>主な素材</label>
-                        <select id="form-material">
-                            <option value="">素材を選択してください</option>
-                            <option value="Stainless Steel">ステンレススチール (SUS304 / SUS316)</option>
+                        <label>主要素材</label>
+                        <select name="material" id="form-material" required>
+                            <option value="">素材を選択</option>
+                            <option value="Stainless Steel">ステンレス鋼 (SUS304 / SUS316)</option>
                             <option value="925 Silver">925スターリングシルバー (S925)</option>
                             <option value="Solid K-Gold">ソリッドKゴールド (9K/14K/18K)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>プロジェクトのビジョン</label>
-                        <textarea id="form-message" placeholder="ブランドのビジョンや一括生産のニーズについてお聞かせください..." rows="4"></textarea>
+                        <textarea name="message" id="form-message" placeholder="ブランドのビジョンや生産ニーズについてお聞かせください..." rows="4" required></textarea>
                     </div>
-                    <button type="button" onclick="sendInquiry()" class="btn primary">プロジェクト概要を送信</button>
-                    <p style="font-size: 0.7rem; color: #888; text-align: center; margin-top: 20px;">厳格な機密保持を保証します。すべてのお問い合わせを12時間以内に評価します。</p>
-                </div>
+                    <div class="form-group">
+                        <label>デザイン/参考資料をアップロード (最大10MB)</label>
+                        <input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx" class="file-input">
+                    </div>
+                    <button type="submit" class="btn primary">プロジェクト概要を送信</button>
+                    <p style="font-size: 0.7rem; color: #888; text-align: center; margin-top: 20px;">厳格な機密保持を保証します。すべての問い合わせを12時間以内に評価します。</p>
+                </form>
             </div>
         </div>
     </section>
@@ -743,43 +745,7 @@
 
     <script src="../script.js"></script>
     <script>
-        // Back to top button show/hide
-        const backToTopBtn = document.getElementById('back-to-top');
-        window.onscroll = function() {
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        };
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // Direct Email Jump
-        function sendInquiry() {
-            const name = document.getElementById('form-name').value;
-            const brand = document.getElementById('form-brand').value;
-            const email = document.getElementById('form-email').value;
-            const material = document.getElementById('form-material').value;
-            const message = document.getElementById('form-message').value;
-
-            const subject = encodeURIComponent(`ジュエリープロジェクトのお問い合わせ - ${brand || name}`);
-            const body = encodeURIComponent(
-                `氏名: ${name}\n` +
-                `ブランド名: ${brand}\n` +
-                `メールアドレス: ${email}\n` +
-                `素材: ${material}\n\n` +
-                `ご要望事項:\n${message}`
-            );
-
-            window.location.href = `mailto:sales@aizjewelry.com?subject=${subject}&body=${body}`;
-        }
-
+        
         function copyText(text, element) {
             navigator.clipboard.writeText(text).then(() => {
                 const hint = element.querySelector('.copy-hint');

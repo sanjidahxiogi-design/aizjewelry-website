@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <!-- English -->
+  <!-- Index Pages -->
   <url>
     <loc>https://www.aizjewelry.com/</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
@@ -18,11 +18,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aizjewelry.com/"/>
   </url>
 
-  <!-- Spanish -->
   <url>
     <loc>https://www.aizjewelry.com/es/</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
@@ -33,11 +32,10 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
   </url>
 
-  <!-- French -->
   <url>
     <loc>https://www.aizjewelry.com/fr/</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
@@ -48,11 +46,10 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
   </url>
 
-  <!-- German -->
   <url>
     <loc>https://www.aizjewelry.com/de/</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
@@ -63,11 +60,10 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
   </url>
 
-  <!-- Portuguese -->
   <url>
     <loc>https://www.aizjewelry.com/pt/</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
@@ -78,11 +74,10 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
   </url>
 
-  <!-- Japanese -->
   <url>
     <loc>https://www.aizjewelry.com/jp/</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
@@ -93,11 +88,10 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
   </url>
 
-  <!-- Korean -->
   <url>
     <loc>https://www.aizjewelry.com/kr/</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/"/>
@@ -106,6 +100,106 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/"/>
+  </url>
+
+  <!-- Industrial Insights Blog Pages -->
+  <url>
+    <loc>https://www.aizjewelry.com/blog-sus304-vs-316l.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aizjewelry.com/blog-sus304-vs-316l.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.aizjewelry.com/es/blog-sus304-vs-316l.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/blog-sus304-vs-316l.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.aizjewelry.com/fr/blog-sus304-vs-316l.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/blog-sus304-vs-316l.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.aizjewelry.com/de/blog-sus304-vs-316l.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/blog-sus304-vs-316l.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.aizjewelry.com/pt/blog-sus304-vs-316l.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/blog-sus304-vs-316l.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.aizjewelry.com/jp/blog-sus304-vs-316l.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/blog-sus304-vs-316l.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.aizjewelry.com/kr/blog-sus304-vs-316l.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aizjewelry.com/es/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.aizjewelry.com/fr/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.aizjewelry.com/de/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.aizjewelry.com/pt/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/blog-sus304-vs-316l.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/blog-sus304-vs-316l.html"/>
   </url>
 
 </urlset>

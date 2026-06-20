@@ -59,3 +59,30 @@ document.querySelectorAll('nav a, .product-category-nav a').forEach(anchor => {
         }
     });
 });
+
+// GA4 Click Tracking for Navigation & Global Elements
+document.addEventListener('DOMContentLoaded', function() {
+    // Track Logo clicks
+    document.querySelector('.logo').addEventListener('click', function() {
+        gtag('event', 'nav_logo_click');
+    });
+
+    // Track Material Category Tab clicks
+    document.querySelectorAll('.category-tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            gtag('event', 'category_tab_view', {
+                'material': this.closest('.material-section').id,
+                'category': this.getAttribute('data-category')
+            });
+        });
+    });
+
+    // Track Footer/Header contact clicks
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener('click', function() {
+            gtag('event', 'contact_email_click', {
+                'event_label': this.href
+            });
+        });
+    });
+});

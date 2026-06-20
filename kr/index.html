@@ -693,35 +693,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="inquiry-form">
-                    <div class="form-group">
-                        <label>성함</label>
-                        <input type="text" id="form-name" placeholder="Contact 성함">
-                    </div>
-                    <div class="form-group">
-                        <label>브랜드명</label>
-                        <input type="text" id="form-brand" placeholder="브랜드명 Name">
-                    </div>
+                <form class="inquiry-form" action="https://formsubmit.co/sales@aizjewelry.com" method="POST" enctype="multipart/form-data" onsubmit="gtag('event', 'form_submission_web', {'event_category': 'Inquiry', 'event_label': 'FormSubmit'});">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_next" value="https://www.aizjewelry.com/kr/thank-you.html">
+                    <input type="hidden" name="_subject" value="New Jewelry Project Inquiry - AizJewelry.com">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+
                     <div class="form-group">
                         <label>비즈니스 이메일</label>
-                        <input type="email" id="form-email" placeholder="Professional 비즈니스 이메일">
+                        <input type="email" name="email" id="form-email" placeholder="비즈니스 이메일 주소" required>
                     </div>
                     <div class="form-group">
-                        <label>핵심 소재</label>
-                        <select id="form-material">
+                        <label>주요 소재</label>
+                        <select name="material" id="form-material" required>
                             <option value="">관심 소재 선택</option>
-                            <option value="스테인리스 스틸">스테인리스 스틸 (SUS304 / SUS316)</option>
+                            <option value="Stainless Steel">스테인리스 스틸 (SUS304 / SUS316)</option>
                             <option value="925 Silver">925 스털링 실버 (S925)</option>
                             <option value="Solid K-Gold">솔리드 K-골드 (9K/14K/18K)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>프로젝트 비전</label>
-                        <textarea id="form-message" placeholder="브랜드 비전 및 대량 생산 요구 사항에 대해 말씀해 주세요..." rows="4"></textarea>
+                        <textarea name="message" id="form-message" placeholder="귀하의 브랜드 비전과 생산 요구 사항에 대해 알려주세요..." rows="4" required></textarea>
                     </div>
-                    <button type="button" onclick="sendInquiry()" class="btn primary">프로젝트 개요 전송</button>
+                    <div class="form-group">
+                        <label>디자인 / 참고 자료 업로드 (최대 10MB)</label>
+                        <input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx" class="file-input">
+                    </div>
+                    <button type="submit" class="btn primary">프로젝트 브리프 전송</button>
                     <p style="font-size: 0.7rem; color: #888; text-align: center; margin-top: 20px;">엄격한 기밀 유지를 보장합니다. 모든 문의는 12시간 이내에 검토됩니다.</p>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -745,43 +747,7 @@
 
     <script src="../script.js"></script>
     <script>
-        // Back to top button show/hide
-        const backToTopBtn = document.getElementById('back-to-top');
-        window.onscroll = function() {
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        };
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // 직통 이메일 Jump
-        function sendInquiry() {
-            const name = document.getElementById('form-name').value;
-            const brand = document.getElementById('form-brand').value;
-            const email = document.getElementById('form-email').value;
-            const material = document.getElementById('form-material').value;
-            const message = document.getElementById('form-message').value;
-
-            const subject = encodeURIComponent(`Jewelry Project Inquiry - ${brand || name}`);
-            const body = encodeURIComponent(
-                `성함: ${name}\n` +
-                `Brand Name: ${brand}\n` +
-                `Email: ${email}\n` +
-                `Material: ${material}\n\n` +
-                `Requirements:\n${message}`
-            );
-
-            window.location.href = `mailto:sales@aizjewelry.com?subject=${subject}&body=${body}`;
-        }
-
+        
         function copyText(text, element) {
             navigator.clipboard.writeText(text).then(() => {
                 const hint = element.querySelector('.copy-hint');

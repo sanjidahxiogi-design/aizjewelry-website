@@ -695,35 +695,37 @@ Ihr engagierter Fertigungspartner für skalierbare, hochwertige Schmuckkollektio
                         </div>
                     </div>
                 </div>
-                <div class="inquiry-form">
-                    <div class="form-group">
-                        <label>Vollständiger Name</label>
-                        <input type="text" id="form-name" placeholder="Vollständiger Name des Kontakts">
-                    </div>
-                    <div class="form-group">
-                        <label>Unabhängige Marke</label>
-                        <input type="text" id="form-brand" placeholder="Name der unabhängigen Marke">
-                    </div>
+                <form class="inquiry-form" action="https://formsubmit.co/sales@aizjewelry.com" method="POST" enctype="multipart/form-data" onsubmit="gtag('event', 'form_submission_web', {'event_category': 'Inquiry', 'event_label': 'FormSubmit'});">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_next" value="https://www.aizjewelry.com/de/thank-you.html">
+                    <input type="hidden" name="_subject" value="New Jewelry Project Inquiry - AizJewelry.com">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+
                     <div class="form-group">
                         <label>Geschäftliche E-Mail</label>
-                        <input type="email" id="form-email" placeholder="Professionelle geschäftliche E-Mail">
+                        <input type="email" name="email" id="form-email" placeholder="Geschäftliche E-Mail-Adresse" required>
                     </div>
                     <div class="form-group">
                         <label>Kernmaterial</label>
-                        <select id="form-material">
-                            <option value="">Materialinteresse wählen</option>
+                        <select name="material" id="form-material" required>
+                            <option value="">Materialinteresse auswählen</option>
                             <option value="Stainless Steel">Edelstahl (SUS304 / SUS316)</option>
                             <option value="925 Silver">925 Sterlingsilber (S925)</option>
-                            <option value="Massives K-Gold">Massives K-Gold (9K/14K/18K)</option>
+                            <option value="Solid K-Gold">Massives K-Gold (9K/14K/18K)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Projektvision</label>
-                        <textarea id="form-message" placeholder="Erzählen Sie uns von Ihrer Markenvision und Ihrem Bedarf an Serienproduktion..." rows="4"></textarea>
+                        <textarea name="message" id="form-message" placeholder="Erzählen Sie uns von Ihrer Markenvision und Ihrem Produktionsbedarf..." rows="4" required></textarea>
                     </div>
-                    <button type="button" onclick="sendInquiry()" class="btn primary">Projekt-Briefing senden</button>
-                    <p style="font-size: 0.7rem; color: #888; text-align: center; margin-top: 20px;">Strikte Vertraulichkeit garantiert. Wir werten alle Anfragen innerhalb von 12 Stunden aus.</p>
-                </div>
+                    <div class="form-group">
+                        <label>Designs / Referenzen hochladen (Max. 10MB)</label>
+                        <input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx" class="file-input">
+                    </div>
+                    <button type="submit" class="btn primary">Projekt-Briefing senden</button>
+                    <p style="font-size: 0.7rem; color: #888; text-align: center; margin-top: 20px;">Strenge Vertraulichkeit garantiert. Wir prüfen alle Anfragen innerhalb von 12 Stunden.</p>
+                </form>
             </div>
         </div>
     </section>
@@ -747,43 +749,7 @@ Ihr engagierter Fertigungspartner für skalierbare, hochwertige Schmuckkollektio
 
     <script src="../script.js"></script>
     <script>
-        // Back to top button show/hide
-        const backToTopBtn = document.getElementById('back-to-top');
-        window.onscroll = function() {
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        };
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // Direkte E-Mail Jump
-        function sendInquiry() {
-            const name = document.getElementById('form-name').value;
-            const brand = document.getElementById('form-brand').value;
-            const email = document.getElementById('form-email').value;
-            const material = document.getElementById('form-material').value;
-            const message = document.getElementById('form-message').value;
-
-            const subject = encodeURIComponent(`Jewelry Project Inquiry - ${brand || name}`);
-            const body = encodeURIComponent(
-                `Vollständiger Name: ${name}\n` +
-                `Brand Name: ${brand}\n` +
-                `Email: ${email}\n` +
-                `Material: ${material}\n\n` +
-                `Requirements:\n${message}`
-            );
-
-            window.location.href = `mailto:sales@aizjewelry.com?subject=${subject}&body=${body}`;
-        }
-
+        
         function copyText(text, element) {
             navigator.clipboard.writeText(text).then(() => {
                 const hint = element.querySelector('.copy-hint');

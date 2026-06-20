@@ -664,23 +664,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="inquiry-form">
-                    <div class="form-group">
-                        <label>Nom Complet</label>
-                        <input type="text" id="form-name" placeholder="Nom complet de contact">
-                    </div>
-                    <div class="form-group">
-                        <label>Marque Indépendante</label>
-                        <input type="text" id="form-brand" placeholder="Nom de la marque indépendante">
-                    </div>
+                <form class="inquiry-form" action="https://formsubmit.co/sales@aizjewelry.com" method="POST" enctype="multipart/form-data" onsubmit="gtag('event', 'form_submission_web', {'event_category': 'Inquiry', 'event_label': 'FormSubmit'});">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_next" value="https://www.aizjewelry.com/fr/thank-you.html">
+                    <input type="hidden" name="_subject" value="New Jewelry Project Inquiry - AizJewelry.com">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+
                     <div class="form-group">
                         <label>E-mail Professionnel</label>
-                        <input type="email" id="form-email" placeholder="E-mail professionnel">
+                        <input type="email" name="email" id="form-email" placeholder="E-mail professionnel" required>
                     </div>
                     <div class="form-group">
                         <label>Matériau Principal</label>
-                        <select id="form-material">
-                            <option value="">Sélectionner l'intérêt matériel</option>
+                        <select name="material" id="form-material" required>
+                            <option value="">Sélectionner l'intérêt pour le matériau</option>
                             <option value="Stainless Steel">Acier Inoxydable (SUS304 / SUS316)</option>
                             <option value="925 Silver">Argent Sterling 925 (S925)</option>
                             <option value="Solid K-Gold">Or K Massif (9K/14K/18K)</option>
@@ -688,11 +686,15 @@
                     </div>
                     <div class="form-group">
                         <label>Vision du Projet</label>
-                        <textarea id="form-message" placeholder="Parlez-nous de votre vision de marque et de vos besoins de production par lots..." rows="4"></textarea>
+                        <textarea name="message" id="form-message" placeholder="Parlez-nous de votre vision de marque et de vos besoins de production..." rows="4" required></textarea>
                     </div>
-                    <button type="button" onclick="sendInquiry()" class="btn primary">Envoyer le Brief du Projet</button>
+                    <div class="form-group">
+                        <label>Télécharger Designs / Références (Max 10Mo)</label>
+                        <input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx" class="file-input">
+                    </div>
+                    <button type="submit" class="btn primary">Envoyer le Brief du Projet</button>
                     <p style="font-size: 0.7rem; color: #888; text-align: center; margin-top: 20px;">Confidentialité stricte garantie. Nous évaluons toutes les demandes sous 12 heures.</p>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -716,43 +718,7 @@
 
     <script src="../script.js"></script>
     <script>
-        // Bouton de retour en haut affichage/masquage
-        const backToTopBtn = document.getElementById('back-to-top');
-        window.onscroll = function() {
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        };
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // Envoi direct de l'e-mail
-        function sendInquiry() {
-            const name = document.getElementById('form-name').value;
-            const brand = document.getElementById('form-brand').value;
-            const email = document.getElementById('form-email').value;
-            const material = document.getElementById('form-material').value;
-            const message = document.getElementById('form-message').value;
-
-            const subject = encodeURIComponent(`Demande de projet de bijoux - ${brand || name}`);
-            const body = encodeURIComponent(
-                `Nom Complet: ${name}\n` +
-                `Nom de la Marque: ${brand}\n` +
-                `E-mail: ${email}\n` +
-                `Matériau: ${material}\n\n` +
-                `Exigences:\n${message}`
-            );
-
-            window.location.href = `mailto:sales@aizjewelry.com?subject=${subject}&body=${body}`;
-        }
-
+        
         function copyText(text, element) {
             navigator.clipboard.writeText(text).then(() => {
                 const hint = element.querySelector('.copy-hint');

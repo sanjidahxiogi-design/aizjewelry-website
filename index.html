@@ -691,22 +691,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="inquiry-form">
-                    <div class="form-group">
-                        <label>Full Name</label>
-                        <input type="text" id="form-name" placeholder="Contact Full Name">
-                    </div>
-                    <div class="form-group">
-                        <label>Independent Brand</label>
-                        <input type="text" id="form-brand" placeholder="Independent Brand Name">
-                    </div>
+                <form class="inquiry-form" action="https://formsubmit.co/sales@aizjewelry.com" method="POST" enctype="multipart/form-data" onsubmit="gtag('event', 'form_submission_web', {'event_category': 'Inquiry', 'event_label': 'FormSubmit'});">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_next" value="https://www.aizjewelry.com/thank-you.html">
+                    <input type="hidden" name="_subject" value="New Jewelry Project Inquiry - AizJewelry.com">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+
                     <div class="form-group">
                         <label>Business Email</label>
-                        <input type="email" id="form-email" placeholder="Professional Business Email">
+                        <input type="email" name="email" id="form-email" placeholder="Professional Business Email" required>
                     </div>
                     <div class="form-group">
                         <label>Core Material</label>
-                        <select id="form-material">
+                        <select name="material" id="form-material" required>
                             <option value="">Select Material Interest</option>
                             <option value="Stainless Steel">Stainless Steel (SUS304 / SUS316)</option>
                             <option value="925 Silver">925 Sterling Silver (S925)</option>
@@ -715,11 +713,15 @@
                     </div>
                     <div class="form-group">
                         <label>Project Vision</label>
-                        <textarea id="form-message" placeholder="Tell us about your brand vision and batch production needs..." rows="4"></textarea>
+                        <textarea name="message" id="form-message" placeholder="Tell us about your brand vision and batch production needs..." rows="4" required></textarea>
                     </div>
-                    <button type="button" onclick="sendInquiry()" class="btn primary">Send Project Brief</button>
+                    <div class="form-group">
+                        <label>Upload Designs / References (Max 10MB)</label>
+                        <input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx" class="file-input">
+                    </div>
+                    <button type="submit" class="btn primary">Send Project Brief</button>
                     <p style="font-size: 0.7rem; color: #888; text-align: center; margin-top: 20px;">Strict confidentiality guaranteed. We evaluate all inquiries within 12 hours.</p>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -736,7 +738,7 @@
         <button onclick="scrollToTop()" id="back-to-top" class="back-to-top-float" title="Back to Top">
             <svg viewBox="0 0 448 512"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L256 161.3V464c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V161.3L53.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
         </button>
-        <a href="https://wa.me/8618902465287" class="whatsapp-float" target="_blank" title="Contact us on WhatsApp">
+        <a href="https://wa.me/8618902465287?text=Hi,%20I%20found%20your%20brand%20on%20the%20official%20website.%20I'm%20interested%20in%20your%20custom%20jewelry%20services..." class="whatsapp-float" target="_blank" title="Contact us on WhatsApp" onclick="gtag('event', 'contact_whatsapp', {'event_category': 'Contact', 'event_label': 'Floating WhatsApp'});">
             <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.7 69.4 27 106.1 27 122.4 0 222-99.6 222-222 0-59.3-23-115-64.9-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.5-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-82.7 184.6-184.5 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.5-11.3 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.2 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.7z"/></svg>
         </a>
     </div>
@@ -758,26 +760,6 @@
                 top: 0,
                 behavior: 'smooth'
             });
-        }
-
-        // Direct Email Jump
-        function sendInquiry() {
-            const name = document.getElementById('form-name').value;
-            const brand = document.getElementById('form-brand').value;
-            const email = document.getElementById('form-email').value;
-            const material = document.getElementById('form-material').value;
-            const message = document.getElementById('form-message').value;
-
-            const subject = encodeURIComponent(`Jewelry Project Inquiry - ${brand || name}`);
-            const body = encodeURIComponent(
-                `Full Name: ${name}\n` +
-                `Brand Name: ${brand}\n` +
-                `Email: ${email}\n` +
-                `Material: ${material}\n\n` +
-                `Requirements:\n${message}`
-            );
-
-            window.location.href = `mailto:sales@aizjewelry.com?subject=${subject}&body=${body}`;
         }
 
         function copyText(text, element) {

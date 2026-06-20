@@ -1170,6 +1170,20 @@ nav {
     transform: scale(1.1);
 }
 
+.inquiry-form .file-input {
+    border: 1px dashed #ddd;
+    padding: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.inquiry-form .file-input:hover {
+    border-color: var(--primary);
+    background: #fdfaf5;
+}
+
 /* Footer */
 footer {
     background: #000;
