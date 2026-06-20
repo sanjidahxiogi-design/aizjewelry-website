@@ -87,6 +87,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Handle Form Submission via AJAX
+document.querySelectorAll('.inquiry-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formContainer = this.parentElement;
+        const formData = new FormData(this);
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Hide Form and show Thank You message
+                this.style.display = 'none';
+                const thankYouDiv = formContainer.querySelector('.thank-you-inline');
+                if (thankYouDiv) {
+                    thankYouDiv.style.display = 'block';
+                    // Scroll to message
+                    thankYouDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                gtag('event', 'form_submission_success');
+            } else {
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Sorry, there was an error sending your message. Please try again or contact us directly via email.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+        });
+    });
+});
+
 // Update File Name Display on Upload
 function updateFileName(input) {
     const fileName = input.files.length > 0 ? input.files[0].name : "";
