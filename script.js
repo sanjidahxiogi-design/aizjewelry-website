@@ -86,3 +86,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Update File Name Display on Upload
+function updateFileName(input) {
+    const fileName = input.files.length > 0 ? input.files[0].name : "";
+    const display = input.parentElement.querySelector('.file-name-display');
+    if (display && fileName) {
+        display.textContent = fileName;
+    }
+}
