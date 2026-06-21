@@ -1481,41 +1481,75 @@ footer p {
     .whatsapp-float svg, .back-to-top-float svg { width: 22px; height: 22px; }
 }
 
-/* --- Get a Quote Button Enhancement --- */
+/* --- Premium Button Enhancements --- */
 .nav-cta {
-    background: var(--dark) !important;
+    background: #111 !important;
     color: #fff !important;
-    padding: 12px 24px !important;
-    font-size: 0.85rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 2px !important;
+    padding: 15px 35px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 3px !important;
     text-transform: uppercase !important;
-    border: 1px solid var(--dark) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border: 1px solid #111 !important;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) !important;
     border-radius: 0 !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .nav-cta:hover {
     background: transparent !important;
-    color: var(--dark) !important;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+    color: #111 !important;
+    letter-spacing: 4px !important;
+}
+
+/* Inquire Now Button - Big & Grand */
+.inquiry-form button[type="submit"] {
+    background: #111 !important;
+    color: #fff !important;
+    width: 100% !important;
+    padding: 22px !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 4px !important;
+    text-transform: uppercase !important;
+    border: none !important;
+    border-radius: 0 !important;
+    cursor: pointer;
+    transition: all 0.4s ease !important;
+    margin-top: 10px;
+}
+
+.inquiry-form button[type="submit"]:hover {
+    background: #333 !important;
+    letter-spacing: 6px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Back to Home - Re-styled and Re-positioned */
+.back-home-wrapper {
+    text-align: right;
+    margin-top: 30px;
 }
 
 .back-home-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 30px;
-    color: var(--dark);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: transform 0.3s ease;
+    display: inline-block !important;
+    padding: 12px 30px !important;
+    border: 1px solid #ddd !important;
+    color: #666 !important;
+    text-decoration: none !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    transition: all 0.3s ease !important;
+    font-weight: 500 !important;
 }
 
 .back-home-btn:hover {
-    transform: translateX(-5px);
-    color: var(--primary);
+    border-color: #111 !important;
+    color: #111 !important;
+    background: #f9f9f9;
 }
 
 /* --- File Upload Custom Styling --- */
