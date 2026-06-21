@@ -671,71 +671,33 @@
         </div>
     </section>
 
+    
     <section id="contact" class="contact section">
         <div class="container">
-            <div class="contact-card">
-                <div class="contact-info">
-                    <h2>브랜?파트너로서의 협력</h2>
-                    <p>당사?전문 팀?귀하의 독특?브랜?비전?대?논의?보세? 당사?독립 주얼?브랜드를 위해 특별?맞춤화된 중소 규모 로트 유연 생산?탁월합니?</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span>직통 이메?/span>
-                            <div class="copy-box" onclick="copyText('sales@aizjewelry.com', this)">
-                                <strong>sales@aizjewelry.com</strong>
-                                <span class="copy-hint">복사</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <span>WhatsApp 직통</span>
-                            <a href="https://wa.me/8618902465287" target="_blank" class="whatsapp-secure-btn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.89 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.743-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                                <strong>상담 시작하기</strong>
-                            </a>
-                        </div>
-                        <div class="contact-item">
-                            <span>회사 주소:</span>
-                            <strong style="font-size: 0.85rem; font-weight: 600;">B05 2F Baolin Building, Cuizhu Street, LuoHu, Shenzhen</strong>
-                        </div>
+            <div class="contact-card" style="display: grid; grid-template-columns: 1fr 1.2fr; box-shadow: 0 30px 70px rgba(0,0,0,0.12); border-radius: 4px; overflow: hidden; background: #fff;">
+                <div class="contact-info" style="background: #111; color: #fff; padding: 60px; display: flex; flex-direction: column; justify-content: center;">
+                    <h2 style="font-family: 'Bodoni Moda', serif; font-size: 2.8rem; margin-bottom: 25px; line-height: 1.1;">Collaborate with Your Brand Partner</h2>
+                    <div style="display: flex; flex-direction: column; gap: 25px;">
+                        <div><span style="color: #c5a059; font-size: 0.75rem; text-transform: uppercase;">EMAIL</span><br><strong>sales@aizjewelry.com</strong></div>
+                        <div><span style="color: #c5a059; font-size: 0.75rem; text-transform: uppercase;">WHATSAPP</span><br><strong>0086 18902465287</strong></div>
                     </div>
                 </div>
-                <form class="inquiry-form" action="https://formsubmit.co/sales@aizjewelry.com" method="POST" enctype="multipart/form-data" onsubmit="gtag('event', 'form_submission_web', {'event_category': 'Inquiry', 'event_label': 'FormSubmit'});">
-                    <!-- FormSubmit Configuration -->
-                    <input type="hidden" name="_next" value="https://www.aizjewelry.com/kr/thank-you.html">
-                    <input type="hidden" name="_subject" value="New Jewelry Project Inquiry - AizJewelry.com">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <div class="form-group">
-                        <label>비즈니스 이메?/label>
-                        <input type="email" name="email" id="form-email" placeholder="비즈니스 이메?주소" required>
+                <div class="contact-form" style="padding: 60px; background: #fff; position: relative;">
+                    <form id="FOOTER-FORM-UNIQUE" action="https://formsubmit.co/sales@aizjewelry.com" method="POST" onsubmit="event.preventDefault(); document.getElementById('FOOTER-FORM-UNIQUE').style.display='none'; document.getElementById('FOOTER-THANK-YOU-UNIQUE').style.setProperty('display','block','important'); fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', {method:'POST', body:new FormData(this)});">
+                        <input type="email" name="email" placeholder="Business Email" required style="width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #eee; background: #f9f9f9;">
+                        <textarea name="message" placeholder="Details..." rows="6" required style="width: 100%; padding: 15px; margin-bottom: 25px; border: 1px solid #eee; background: #f9f9f9; resize: none;"></textarea>
+                        <button type="submit" style="width: 100%; background: #111; color: #fff; padding: 22px; border: none; font-weight: 700; letter-spacing: 4px; cursor: pointer; text-transform: uppercase;">INQUIRE NOW</button>
+                    </form>
+                    <div id="FOOTER-THANK-YOU-UNIQUE" style="display: none; text-align: center; padding: 40px 0;">
+                        <div style="font-size: 4rem; color: #c5a059; margin-bottom: 20px;">✓</div>
+                        <h3 style="font-family: 'Bodoni Moda', serif; font-size: 2.2rem; color: #111;">감사합니다!</h3>
+                        <p style="color: #666;">문의가 전송되었습니다.</p>
                     </div>
-                    <div class="form-group">
-                        <label>주요 소재</label>
-                        <select name="material" id="form-material" required>
-                            <option value="">관?소재 선택</option>
-                            <option value="Stainless Steel">스테인리?스틸 (SUS304 / SUS316)</option>
-                            <option value="925 Silver">925 스털?실버 (S925)</option>
-                            <option value="Solid K-Gold">솔리?K-골드 (9K/14K/18K)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>프로젝트 비전</label>
-                        <textarea name="message" id="form-message" placeholder="귀하의 브랜?비전?생산 요구 사항?대?알려주세?.." rows="4" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>디자?/ 참고 자료 업로?(최대 10MB)</label>
-                        <div class="file-input-wrapper">
-                            <span class="custom-file-btn">파일 선택</span>
-                            <span class="file-name-display">선택?파일 없음</span>
-                            <input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx" class="file-input" onchange="updateFileName(this)">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn primary">프로젝트 브리?전송</button>
-                    <p style="font-size: 0.7rem; color: #888; text-align: center; margin-top: 20px;">엄격?기밀 유지?보장합니? 모든 문의?12시간 이내?검토됩니다.</p>
-                
-                    
+                </div>
+            </div>
+        </div>
     </section>
+
 
     <footer>
         <div class="container footer-content">
