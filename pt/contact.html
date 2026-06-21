@@ -31,9 +31,13 @@
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
-        .hero, section:not(#contact), .material-section, .product-category-nav { display: none !important; }
-        #contact { display: block !important; padding-top: 160px !important; min-height: 85vh; background: #fff; }
-    </style></head>
+            .hero, section:not(#contact), .material-section, .product-category-nav { display: none !important; }
+            #contact { display: block !important; padding-top: 160px !important; min-height: 85vh; background: #fff; }
+            .thank-you-inline { display: none !important; text-align: center; padding: 40px 0; }
+            .inquire-now-btn { background: #111 !important; letter-spacing: 3px !important; font-weight: 700 !important; }
+            .back-home-premium { display: inline-block; margin-top: 30px; padding: 12px 35px; border: 1px solid #111; color: #111 !important; text-decoration: none; font-weight: 700; letter-spacing: 1px; transition: 0.3s; }
+            .back-home-premium:hover { background: #111 !important; color: #fff !important; }
+        </style></head>
 <body>
     <header>
         <nav class="container">
@@ -761,17 +765,17 @@
         }
     </script>
 <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const f = document.querySelector(".inquiry-form");
-            if(f) {
-                f.onsubmit = function(e) {
-                    e.preventDefault();
-                    this.style.setProperty('display', 'none', 'important');
-                    const ty = document.getElementById('ULTIMATE-THANK-YOU');
-                    if(ty) { ty.style.setProperty('display', 'block', 'important'); ty.scrollIntoView({behavior:'smooth', block:'center'}); }
-                    fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', {method:'POST', body:new FormData(this), headers:{'Accept':'application/json'}});
-                };
-            }
-        });
-    </script></body>
+            document.addEventListener('DOMContentLoaded', function() {
+                const f = document.querySelector(".inquiry-form");
+                if(f) {
+                    f.onsubmit = function(e) {
+                        e.preventDefault();
+                        this.querySelectorAll("div:not(.thank-you-inline), button, input, textarea, p").forEach(el => el.style.display="none");
+                        const ty = this.querySelector(".thank-you-inline");
+                        if(ty) { ty.style.setProperty("display", "block", "important"); ty.scrollIntoView({behavior:"smooth", block:"center"}); }
+                        fetch("https://formsubmit.co/ajax/sales@aizjewelry.com", {method:"POST", body:new FormData(this)});
+                    };
+                }
+            });
+        </script></body>
 </html>
