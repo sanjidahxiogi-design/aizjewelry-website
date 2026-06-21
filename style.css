@@ -1481,6 +1481,43 @@ footer p {
     .whatsapp-float svg, .back-to-top-float svg { width: 22px; height: 22px; }
 }
 
+/* --- Get a Quote Button Enhancement --- */
+.nav-cta {
+    background: var(--dark) !important;
+    color: #fff !important;
+    padding: 12px 24px !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    border: 1px solid var(--dark) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 0 !important;
+}
+
+.nav-cta:hover {
+    background: transparent !important;
+    color: var(--dark) !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.back-home-btn:hover {
+    transform: translateX(-5px);
+    color: var(--primary);
+}
+
 /* --- File Upload Custom Styling --- */
 .file-input-wrapper {
     position: relative;
