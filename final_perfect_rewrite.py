@@ -1,17 +1,36 @@
-<!DOCTYPE html>
-<html lang="fr">
+import os
+
+base_dir = r"E:\AizJewelry_Project"
+langs = ["", "de", "es", "fr", "jp", "kr", "pt"]
+
+configs = {
+    "": {"lang": "en", "back": "BACK TO HOME", "wa_btn": "START INQUIRY", "t": "Thank you!", "m": "Your inquiry has been sent."},
+    "de": {"lang": "de", "back": "ZURÜCK", "wa_btn": "ANFRAGE STARTEN", "t": "Vielen Dank!", "m": "Anfrage gesendet."},
+    "es": {"lang": "es", "back": "VOLVER", "wa_btn": "INICIAR CONSULTA", "t": "¡Gracias!", "m": "Enviado."},
+    "fr": {"lang": "fr", "back": "RETOUR", "wa_btn": "DÉMARRER", "t": "Merci !", "m": "Envoyé."},
+    "jp": {"lang": "jp", "back": "ホームに戻る", "wa_btn": "お問い合わせ開始", "t": "ありがとうございます！", "m": "送信されました。"},
+    "kr": {"lang": "kr", "back": "홈으로 돌아가기", "wa_btn": "문의 시작", "t": "감사합니다!", "m": "전송되었습니다."},
+    "pt": {"lang": "pt", "back": "VOLTAR", "wa_btn": "INICIAR CONSULTA", "t": "Obrigado!", "m": "Enviado."}
+}
+
+def write_perfect_contact(folder, c):
+    path = os.path.join(base_dir, folder, "contact.html")
+    css_ref = "style.css" if folder == "" else "../style.css"
+    
+    html = f"""<!DOCTYPE html>
+<html lang="{c['lang']}">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get a Quote - Aiz Jewelry</title>
-    <link rel="stylesheet" href="../style.css?v=50.0">
+    <link rel="stylesheet" href="{css_ref}?v=50.0">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        main { padding-top: 150px !important; min-height: 85vh; background: #fff; display: flex; align-items: center; }
-        .thank-you-inline { display: none !important; text-align: center; padding: 50px 0; }
-        .premium-back-btn { display: inline-block; background: transparent; color: #111 !important; padding: 12px 35px; border: 1px solid #111; text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; transition: 0.3s; text-transform: uppercase; }
-        .premium-back-btn:hover { background: #111; color: #fff !important; }
-        .whatsapp-btn-secure { display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.2); padding: 12px 25px; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; transition: all 0.3s; margin-top: 10px; }
-        .whatsapp-btn-secure:hover { background: #25d366; border-color: #25d366; }
+        main {{ padding-top: 150px !important; min-height: 85vh; background: #fff; display: flex; align-items: center; }}
+        .thank-you-inline {{ display: none !important; text-align: center; padding: 50px 0; }}
+        .premium-back-btn {{ display: inline-block; background: transparent; color: #111 !important; padding: 12px 35px; border: 1px solid #111; text-decoration: none; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; transition: 0.3s; text-transform: uppercase; }}
+        .premium-back-btn:hover {{ background: #111; color: #fff !important; }}
+        .whatsapp-btn-secure {{ display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.2); padding: 12px 25px; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; transition: all 0.3s; margin-top: 10px; }}
+        .whatsapp-btn-secure:hover {{ background: #25d366; border-color: #25d366; }}
     </style>
 </head>
 <body>
@@ -36,7 +55,7 @@
                                 <span style="color:#c5a059; font-size:0.75rem; text-transform:uppercase;">WHATSAPP DIRECT</span><br>
                                 <a href="https://wa.me/8618902465287" target="_blank" class="whatsapp-btn-secure">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.89 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.743-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                                    <strong>DÉMARRER</strong>
+                                    <strong>{c['wa_btn']}</strong>
                                 </a>
                             </div>
                         </div>
@@ -49,17 +68,22 @@
                         </form>
                         <div id="T-REAL" class="thank-you-inline">
                             <div style="font-size:4.5rem; color:#c5a059;">✓</div>
-                            <h3 style="font-family:'Bodoni Moda', serif; font-size:2.5rem;">Merci !</h3>
-                            <p style="color:#666;">Envoyé.</p>
+                            <h3 style="font-family:'Bodoni Moda', serif; font-size:2.5rem;">{c['t']}</h3>
+                            <p style="color:#666;">{c['m']}</p>
                             <a href="index.html" class="premium-back-btn" style="margin-top:40px; background:#111; color:#fff !important;">BACK TO HOME</a>
                         </div>
-                        <div id="B-WRAP" style="text-align:right; margin-top:40px;"><a href="index.html" class="premium-back-btn">← RETOUR</a></div>
+                        <div id="B-WRAP" style="text-align:right; margin-top:40px;"><a href="index.html" class="premium-back-btn">← {c['back']}</a></div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer style="text-align:center; padding:40px 0; color:#999; border-top:1px solid #eee;">&copy; 2026 Aiz Jewelry. All Rights Reserved.</footer>
-    <script>document.getElementById("F-REAL").onsubmit = function(e){ e.preventDefault(); this.style.setProperty("display","none","important"); document.getElementById("B-WRAP").style.setProperty("display","none","important"); var ty=document.getElementById("T-REAL"); ty.style.setProperty("display","block","important"); fetch("https://formsubmit.co/ajax/sales@aizjewelry.com",{method:"POST", body:new FormData(this)}); };</script>
+    <script>document.getElementById("F-REAL").onsubmit = function(e){{ e.preventDefault(); this.style.setProperty("display","none","important"); document.getElementById("B-WRAP").style.setProperty("display","none","important"); var ty=document.getElementById("T-REAL"); ty.style.setProperty("display","block","important"); fetch("https://formsubmit.co/ajax/sales@aizjewelry.com",{{method:"POST", body:new FormData(this)}}); }};</script>
 </body>
-</html>
+</html>"""
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(html)
+
+for l in langs:
+    write_perfect_contact(l, configs[l])
