@@ -1530,26 +1530,28 @@ footer p {
 /* Back to Home - Re-styled and Re-positioned */
 .back-home-wrapper {
     text-align: right;
-    margin-top: 30px;
+    margin-top: 25px;
+    padding-right: 10px;
 }
 
 .back-home-btn {
     display: inline-block !important;
-    padding: 12px 30px !important;
-    border: 1px solid #ddd !important;
-    color: #666 !important;
+    padding: 12px 35px !important;
+    border: 1px solid #111 !important;
+    color: #111 !important;
     text-decoration: none !important;
-    font-size: 0.75rem !important;
+    font-size: 0.8rem !important;
     text-transform: uppercase !important;
     letter-spacing: 2px !important;
-    transition: all 0.3s ease !important;
-    font-weight: 500 !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    font-weight: 600 !important;
+    background: transparent !important;
 }
 
 .back-home-btn:hover {
-    border-color: #111 !important;
-    color: #111 !important;
-    background: #f9f9f9;
+    background: #111 !important;
+    color: #fff !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* --- File Upload Custom Styling --- */
