@@ -1,25 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.inquiry-form');
-    if (form) {
+    // 统一处理全站所有询盘表单 (首页底部和独立页)
+    document.querySelectorAll('.inquiry-form').forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            // 1. 隐藏表单
-            this.style.display = 'none';
-            // 2. 隐藏独立的返回链接
-            const staticBack = document.getElementById('back-home-bottom');
-            if(staticBack) staticBack.style.display = 'none';
-            // 3. 显示感谢模块（它现在在卡片内）
-            const ty = document.querySelector('.thank-you-inline');
-            if (ty) {
-                ty.style.display = 'block';
-                ty.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            const formContainer = this.parentElement;
+            const thankYouDiv = formContainer.querySelector('.thank-you-inline');
+
+            // 1. 瞬间视觉反馈 (最重要：言行一致)
+            this.style.setProperty('display', 'none', 'important');
+            if (thankYouDiv) {
+                thankYouDiv.style.setProperty('display', 'block', 'important');
+                thankYouDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
-            // 4. 后台发送
+
+            // 2. 后台悄悄发送
+            const formData = new FormData(this);
             fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', {
                 method: 'POST',
-                body: new FormData(this),
+                body: formData,
                 headers: { 'Accept': 'application/json' }
             });
         });
-    }
+    });
 });
+
+function updateFileName(input) {
+    const fileName = input.files.length > 0 ? input.files[0].name : "";
+    const display = input.parentElement.querySelector('.file-name-display');
+    if (display && fileName) { display.textContent = fileName; }
+}
