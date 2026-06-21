@@ -3,44 +3,54 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angebot anfordern - Aiz Jewelry</title>
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>main { padding-top: 140px; padding-bottom: 80px; } .inquiry-form.hidden { display: none !important; } .thank-you-inline { display: none; text-align: center; padding: 60px 20px; background: #fff; border: 1px solid #eee; margin-top: 20px; } .thank-you-inline.visible { display: block !important; }</style>
+    <link rel="stylesheet" href="../style.css?v=2.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        main { padding-top: 120px; padding-bottom: 80px; min-height: 80vh; background: #fff; display: flex; align-items: center; }
+        .thank-you-inline { display: none; text-align: center; padding: 60px 20px; background: #fff; }
+        .thank-you-inline.visible { display: block !important; }
+    </style>
 </head>
 <body>
     <header class="header"><nav class="container nav-container"><a href="index.html" class="logo"><div class="logo-text"><span class="brand-name">AIZ</span><span class="brand-sub">JEWELRY</span></div></a><div class="nav-links"><a href="index.html">HOME</a><a href="contact.html" class="nav-cta">Get a Quote</a></div></nav></header>
-    <main><section id="contact" class="contact section"><div class="container"><div class="contact-card">
-        <div class="contact-info"><h2>Collaborate with Your Brand Partner</h2><p>Discuss your vision with our specialized team.</p></div>
-        <div class="contact-form">
-            <form id="inquiry-form" class="inquiry-form" action="https://formsubmit.co/sales@aizjewelry.com" method="POST">
-                <input type="email" name="email" placeholder="Email" required style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd;">
-                <textarea name="message" placeholder="Details" rows="4" required style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd;"></textarea>
-                <button type="submit" class="btn primary" style="width:100%; background:#111; color:#fff; padding:20px; border:none; letter-spacing:3px; cursor:pointer;">INQUIRE NOW</button>
-            </form>
-            <div id="thank-you-message" class="thank-you-inline">
-                <div style="font-size: 3rem; color: #c5a059; margin-bottom: 20px;">✓</div>
-                <h3 style="font-family: 'Bodoni Moda', serif; font-size: 2rem;">Vielen Dank!</h3><p>Ihre Anfrage wurde gesendet. Wir antworten in 12h.</p>
-                <div style="margin-top:40px;"><a href="index.html" class="back-home-btn" style="padding:12px 30px; border:1px solid #111; text-decoration:none; color:#111;">← ZURÜCK ZUR STARTSEITE</a></div>
+    <main>
+        <section id="contact" class="contact section" style="width:100%;">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <h2>Zusammenarbeit mit Ihrem Markenpartner</h2>
+                        <p>Besprechen Sie Ihre Vision mit unserem spezialisierten Team.</p>
+                        <div class="contact-details">
+                            <div class="contact-item"><span>E-Mail</span><strong>sales@aizjewelry.com</strong></div>
+                            <div class="contact-item"><span>WhatsApp</span><strong>0086 18902465287</strong></div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="inquiry-form" action="https://formsubmit.co/sales@aizjewelry.com" method="POST">
+                            <input type="email" name="email" placeholder="Geschäftliche E-Mail" required style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd;">
+                            <textarea name="message" placeholder="Projektdetails..." rows="4" required style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd;"></textarea>
+                            <button type="submit" style="width:100%; background:#111; color:#fff; padding:20px; border:none; letter-spacing:3px; font-weight:700; cursor:pointer;">INQUIRE NOW</button>
+                        </form>
+                        <div id="thank-you-msg" class="thank-you-inline">
+                            <div style="font-size: 3.5rem; color: #c5a059; margin-bottom: 20px;">✓</div>
+                            <h3 style="font-family: 'Bodoni Moda', serif; font-size: 2.2rem; margin-bottom: 15px;">Vielen Dank!</h3>
+                            <p>Ihre Anfrage wurde gesendet. Wir antworten in 12h.</p>
+                            <div style="margin-top:40px;"><a href="index.html" style="display:inline-block; padding:12px 35px; border:2px solid #111; color:#111; text-decoration:none; font-weight:700;">ZURÜCK ZUR STARTSEITE</a></div>
+                        </div>
+                        <div id="back-link-wrapper" style="margin-top:30px; text-align:right;"><a href="index.html" style="color:#999; font-size:0.8rem; text-decoration:none;">← ZURÜCK</a></div>
+                    </div>
+                </div>
             </div>
-            <div id="back-home-link" class="back-home-wrapper" style="margin-top:40px; text-align:right;"><a href="index.html" class="back-home-btn" style="text-decoration:none; color:#111; font-weight:600; border:1px solid #ddd; padding:10px 20px;">← ZURÜCK ZUR STARTSEITE</a></div>
-        </div>
-    </div></div></section></main>
+        </section>
+    </main>
     <script>
         document.getElementById('inquiry-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const form = this;
-            const btn = form.querySelector('button');
-            btn.textContent = 'SENDING...';
-            btn.disabled = true;
-            fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', {
-                method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
-            });
-            form.classList.add('hidden');
-            document.getElementById('back-home-link').style.display = 'none';
-            document.getElementById('thank-you-message').classList.add('visible');
-            document.getElementById('thank-you-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            this.style.display = 'none';
+            document.getElementById('back-link-wrapper').style.display = 'none';
+            document.getElementById('thank-you-msg').classList.add('visible');
+            fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } });
         });
     </script>
-</body></html>
+</body>
+</html>

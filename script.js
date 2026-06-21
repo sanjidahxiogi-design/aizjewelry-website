@@ -1,4 +1,4 @@
-// Language Switcher
+// Language Switcher Toggle
 document.querySelectorAll('.lang-switcher').forEach(switcher => {
     switcher.addEventListener('click', function(e) {
         if (window.innerWidth <= 992) {
@@ -7,6 +7,7 @@ document.querySelectorAll('.lang-switcher').forEach(switcher => {
         }
     });
 });
+
 document.addEventListener('click', function() {
     document.querySelectorAll('.lang-switcher').forEach(s => s.classList.remove('active'));
 });
@@ -30,35 +31,33 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// --- ABSOLUTE SUCCESS FORM HANDLING ---
+// --- GLOBAL FORM SUBMISSION HANDLER ---
 document.querySelectorAll('.inquiry-form').forEach(form => {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
         const formContainer = this.parentElement;
         const submitBtn = this.querySelector('button[type="submit"]');
-        const thankYouDiv = formContainer.querySelector('.thank-you-inline') || document.querySelector('.thank-you-inline');
-        
-        // 1. Instant Visual Feedback
+        const thankYouDiv = formContainer.querySelector('.thank-you-inline');
+
+        // 1. Loading State
         submitBtn.disabled = true;
         submitBtn.textContent = 'SENDING...';
 
-        // 2. Prepare FormSubmit Data
+        // 2. AJAX Submit (Background)
         const formData = new FormData(this);
         const action = this.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
-
-        // 3. Send via Fetch (Background)
+        
         fetch(action, {
             method: 'POST',
             body: formData,
             headers: { 'Accept': 'application/json' }
         });
 
-        // 4. FORCE SHOW THANK YOU (Crucial!)
-        // No matter what the server says, we show success because user received email
-        this.style.setProperty('display', 'none', 'important');
+        // 3. INSTANT SUCCESS FEEDBACK (Absolute Visibility)
+        this.style.display = 'none';
         if (thankYouDiv) {
-            thankYouDiv.style.setProperty('display', 'block', 'important');
+            thankYouDiv.style.display = 'block';
             thankYouDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     });
@@ -67,5 +66,7 @@ document.querySelectorAll('.inquiry-form').forEach(form => {
 function updateFileName(input) {
     const fileName = input.files.length > 0 ? input.files[0].name : "";
     const display = input.parentElement.querySelector('.file-name-display');
-    if (display && fileName) { display.textContent = fileName; }
+    if (display && fileName) {
+        display.textContent = fileName;
+    }
 }
