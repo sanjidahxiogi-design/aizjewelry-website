@@ -1596,3 +1596,14 @@ footer p {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* --- Final Thank You Display Logic --- */
+.thank-you-inline {
+    display: none !important;
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 0;
+    margin-top: 20px;
+}

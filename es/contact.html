@@ -2,14 +2,45 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Aiz Jewelry</title>
+    <title>Solicitar presupuesto - Aiz Jewelry</title>
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>main { padding-top: 140px; padding-bottom: 80px; background: #fff; min-height: 80vh; display: flex; align-items: center; } #contact { width: 100%; padding: 0 !important; }</style>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>main { padding-top: 140px; padding-bottom: 80px; } .inquiry-form.hidden { display: none !important; } .thank-you-inline { display: none; text-align: center; padding: 60px 20px; background: #fff; border: 1px solid #eee; margin-top: 20px; } .thank-you-inline.visible { display: block !important; }</style>
 </head>
 <body>
-    <header class="header"><nav class="container nav-container"><a href="index.html" class="logo"><img src="https://sc02.alicdn.com/kf/Se1318a00bc9742468f7f2b69415cb0b7e.png" alt="Aiz Jewelry Logo"><div class="logo-text"><span class="brand-name">AIZ</span><span class="brand-sub">JEWELRY</span></div></a><div class="nav-links"><a href="index.html#products">PRODUCTOS</a><a href="index.html#custom">PROCESO PERSONALIZADO</a><a href="index.html#sustainability">SOSTENIBILIDAD</a><a href="index.html#workflow">FLUJO DE TRABAJO</a><a href="index.html#moq">MOQ y MATERIALES</a><a href="index.html#about">SOBRE NOSOTROS</a><div class="lang-switcher"><button class="lang-btn">ES</button><div class="lang-dropdown"><a href="../index.html">EN</a><a href="../de/index.html">DE</a><a href="../es/index.html">ES</a><a href="../fr/index.html">FR</a><a href="../jp/index.html">JP</a><a href="../kr/index.html">KR</a><a href="../pt/index.html">PT</a></div></div><a href="contact.html" class="nav-cta">Solicitar presupuesto</a></div></nav></header>
-    <main><section id="contact" class="contact section"><div class="container"><div class="contact-card"><div class="contact-info"><h2>Collaborate with Your Brand Partner</h2><p>Discuss your unique brand vision with our specialized team. We excel in small-batch flexible production, tailored specifically for independent jewelry brands.</p><div class="contact-details"><div class="contact-item"><span>Direct Email</span><div class="copy-box" onclick="copyText('sales@aizjewelry.com', this)"><strong>sales@aizjewelry.com</strong><span class="copy-hint">Copiar</span></div></div><div class="contact-item"><span>WhatsApp Direct</span><a href="https://wa.me/8618902465287" target="_blank" class="whatsapp-secure-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.89 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.743-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg><strong>Start Inquiry</strong></a></div><div class="contact-item"><span>Company Address:</span><strong style="font-size: 0.85rem; font-weight: 600;">B05 2F Baolin Building, Cuizhu Street, LuoHu, Shenzhen</strong></div></div></div><div class="contact-form"><form class="inquiry-form" action="https://formsubmit.co/sales@aizjewelry.com" method="POST" enctype="multipart/form-data"><div class="form-group"><label>Business Email</label><input type="email" name="email" id="form-email" required></div><div class="form-group"><label>Core Material</label><select name="material" id="form-material" required><option value="">Select Material Interest</option><option value="Stainless Steel">Stainless Steel (SUS304 / SUS316)</option><option value="925 Silver">925 Sterling Silver (S925)</option><option value="Solid K-Gold">Solid K-Gold (9K/14K/18K)</option></select></div><div class="form-group"><label>Project Vision</label><textarea name="message" id="form-message" rows="4" required></textarea></div><div class="form-group"><label>Upload Designs / References (Max 10MB)</label><div class="file-input-wrapper"><span class="custom-file-btn">Choose File</span><span class="file-name-display">No file chosen</span><input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx" class="file-input" onchange="updateFileName(this)"></div></div><button type="submit" class="btn primary">Inquire Now</button></div></div></section></main>
-    <footer><div class="container footer-content"><p>&copy; 2026 Shenzhen Aiz Jewelry Co., Ltd. All Rights Reserved.</p></div></footer>
-    <script src="../script.js?v=1.2?v=1.2"></script><script>function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); } function copyText(text, element) { navigator.clipboard.writeText(text).then(() => { const hint = element.querySelector('.copy-hint'); hint.innerText = '¡Copiado!'; setTimeout(() => { hint.innerText = 'Copiar'; }, 2000); }); }</script>
+    <header class="header"><nav class="container nav-container"><a href="index.html" class="logo"><div class="logo-text"><span class="brand-name">AIZ</span><span class="brand-sub">JEWELRY</span></div></a><div class="nav-links"><a href="index.html">HOME</a><a href="contact.html" class="nav-cta">Get a Quote</a></div></nav></header>
+    <main><section id="contact" class="contact section"><div class="container"><div class="contact-card">
+        <div class="contact-info"><h2>Collaborate with Your Brand Partner</h2><p>Discuss your vision with our specialized team.</p></div>
+        <div class="contact-form">
+            <form id="inquiry-form" class="inquiry-form" action="https://formsubmit.co/sales@aizjewelry.com" method="POST">
+                <input type="email" name="email" placeholder="Email" required style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd;">
+                <textarea name="message" placeholder="Details" rows="4" required style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd;"></textarea>
+                <button type="submit" class="btn primary" style="width:100%; background:#111; color:#fff; padding:20px; border:none; letter-spacing:3px; cursor:pointer;">INQUIRE NOW</button>
+            </form>
+            <div id="thank-you-message" class="thank-you-inline">
+                <div style="font-size: 3rem; color: #c5a059; margin-bottom: 20px;">✓</div>
+                <h3 style="font-family: 'Bodoni Moda', serif; font-size: 2rem;">¡Gracias!</h3><p>Su consulta ha sido enviada. Le contactaremos en 12h.</p>
+                <div style="margin-top:40px;"><a href="index.html" class="back-home-btn" style="padding:12px 30px; border:1px solid #111; text-decoration:none; color:#111;">← VOLVER AL INICIO</a></div>
+            </div>
+            <div id="back-home-link" class="back-home-wrapper" style="margin-top:40px; text-align:right;"><a href="index.html" class="back-home-btn" style="text-decoration:none; color:#111; font-weight:600; border:1px solid #ddd; padding:10px 20px;">← VOLVER AL INICIO</a></div>
+        </div>
+    </div></div></section></main>
+    <script>
+        document.getElementById('inquiry-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const btn = form.querySelector('button');
+            btn.textContent = 'SENDING...';
+            btn.disabled = true;
+            fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+            form.classList.add('hidden');
+            document.getElementById('back-home-link').style.display = 'none';
+            document.getElementById('thank-you-message').classList.add('visible');
+            document.getElementById('thank-you-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
 </body></html>
