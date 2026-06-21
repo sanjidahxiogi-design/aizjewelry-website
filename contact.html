@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get a Quote - Aiz Jewelry</title>
-    <!-- 引入主样式并强刷版本 -->
-    <link rel="stylesheet" href="style.css?v=7.0">
+    <!-- 强刷 CSS 引用版本 -->
+    <link rel="stylesheet" href="style.css?v=10.0">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* 1. 强制镜像首页颜值 */
+        /* 1. 物理级镜像隐藏：保持首页最高设计水准 */
         .hero, .products, .sustainability, .workflow, .moq, .about, .material-section, .product-category-nav, .insights { display: none !important; }
         main { padding-top: 150px !important; min-height: 85vh; background: #fff; display: flex; align-items: center; }
         #contact { display: block !important; width: 100%; }
 
-        /* 2. 感谢界面强制显示逻辑 */
-        #THANK-YOU-BLOCK { display: none !important; text-align: center; padding: 60px 0; }
-        #THANK-YOU-BLOCK.active { display: block !important; }
-        .inquiry-form.hidden { display: none !important; }
+        /* 2. 反馈界面绝对物理显示 */
+        .thank-you-inline { display: none !important; text-align: center; padding: 60px 20px; background: #fff; animation: fadeIn 0.4s ease forwards; }
+        .thank-you-inline.visible { display: block !important; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* 3. 高级感返回按钮样式 */
-        .premium-back-btn {
-            display: inline-block;
-            background: #111;
-            color: #fff !important;
-            padding: 15px 45px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 2px;
+        /* 3. 终极大按钮样式 */
+        .premium-back-btn { 
+            display: inline-block; 
+            background: #111; 
+            color: #fff !important; 
+            padding: 15px 45px; 
+            text-decoration: none; 
+            font-size: 0.85rem; 
+            font-weight: 700; 
+            letter-spacing: 2px; 
             border: 1px solid #111;
             transition: all 0.4s ease;
             text-transform: uppercase;
-            margin-top: 30px;
         }
-        .premium-back-btn:hover {
-            background: transparent;
-            color: #111 !important;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
+        .premium-back-btn:hover { background: transparent; color: #111 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
     </style>
 </head>
 <body>
@@ -61,7 +55,7 @@
         <section id="contact" class="contact section">
             <div class="container">
                 <div class="contact-card" style="display:grid; grid-template-columns:1fr 1.2fr; box-shadow:0 20px 50px rgba(0,0,0,0.1); border-radius:4px; overflow:hidden; background:#fff;">
-                    <!-- 黑区：保留首页图标细节 -->
+                    <!-- 黑区：物理找回丢失的图标细节 -->
                     <div class="contact-info" style="background:#111; color:#fff; padding:70px; display:flex; flex-direction:column; justify-content:center;">
                         <h2 style="font-family:'Bodoni Moda', serif; font-size:3rem; margin-bottom:25px; line-height:1.1;">Collaborate with Your Brand Partner</h2>
                         <div class="contact-details" style="display:flex; flex-direction:column; gap:35px; margin-top:30px;">
@@ -75,25 +69,25 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 白区：表单与强制逻辑 -->
+                    <!-- 白区：表单与反馈逻辑 -->
                     <div class="contact-form" style="padding:70px; background:#fff; position:relative; display:flex; flex-direction:column; justify-content:center;">
-                        <form id="ULTIMATE-FORM" action="https://formsubmit.co/sales@aizjewelry.com" method="POST">
+                        <form id="FINAL-INQUIRY-FORM" action="https://formsubmit.co/sales@aizjewelry.com" method="POST">
                             <input type="email" name="email" placeholder="Business Email" required style="width:100%; padding:18px; margin-bottom:20px; border:1px solid #eee; background:#fcfcfc;">
-                            <textarea name="message" placeholder="Brand Vision & Needs..." rows="7" required style="width:100%; padding:18px; margin-bottom:25px; border:1px solid #eee; background:#fcfcfc; resize:none;"></textarea>
+                            <textarea name="message" placeholder="Details..." rows="7" required style="width:100%; padding:18px; margin-bottom:25px; border:1px solid #eee; background:#fcfcfc; resize:none;"></textarea>
                             <button type="submit" style="width:100%; background:#111; color:#fff; padding:24px; border:none; font-weight:700; letter-spacing:4px; cursor:pointer; text-transform:uppercase;">INQUIRE NOW</button>
                         </form>
 
                         <!-- 感谢界面 -->
-                        <div id="THANK-YOU-BLOCK">
+                        <div id="TY-SCREEN" class="thank-you-inline">
                             <div style="font-size:5rem; color:#c5a059; margin-bottom:20px;">✓</div>
                             <h2 style="font-family:'Bodoni Moda', serif; font-size:2.8rem; margin-bottom:15px;">Thank you!</h2>
                             <p style="color:#666; font-size:1.1rem;">Your inquiry has been sent. We will contact you within 12 hours.</p>
-                            <a href="index.html" class="premium-back-btn">BACK TO HOME</a>
+                            <div style="margin-top:40px;"><a href="index.html" class="premium-back-btn">BACK TO HOME</a></div>
                         </div>
 
-                        <!-- 初始可见的返回按钮 -->
-                        <div id="INITIAL-BACK-WRAP" style="text-align:right; margin-top:40px;">
-                            <a href="index.html" class="premium-back-btn" style="padding:12px 30px; font-size:0.75rem;">← BACK TO HOME</a>
+                        <!-- 初始可见的返回按钮：大气黑色风格 -->
+                        <div id="INIT-BACK-WRAP" style="text-align:right; margin-top:40px;">
+                            <a href="index.html" class="premium-back-btn" style="padding:12px 35px; font-size:0.75rem;">← BACK TO HOME</a>
                         </div>
                     </div>
                 </div>
@@ -101,22 +95,15 @@
         </section>
     </main>
 
-    <footer style="text-align:center; padding:40px 0; color:#999; border-top:1px solid #eee;">
-        <p>&copy; 2026 Aiz Jewelry. All Rights Reserved.</p>
-    </footer>
-
     <script>
-        document.getElementById('ULTIMATE-FORM').onsubmit = function(e) {
+        document.getElementById('FINAL-INQUIRY-FORM').onsubmit = function(e) {
             e.preventDefault();
-            // 物理强制切换显示状态
             this.style.setProperty('display', 'none', 'important');
-            document.getElementById('INITIAL-BACK-WRAP').style.setProperty('display', 'none', 'important');
-            var ty = document.getElementById('THANK-YOU-BLOCK');
+            document.getElementById('INIT-BACK-WRAP').style.setProperty('display', 'none', 'important');
+            var ty = document.getElementById('TY-SCREEN');
             ty.style.setProperty('display', 'block', 'important');
-            ty.classList.add('active');
+            ty.classList.add('visible');
             ty.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            
-            // 后台静默发送数据
             fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', {
                 method: 'POST',
                 body: new FormData(this),
