@@ -1849,3 +1849,358 @@ footer p {
     text-align: center;
     margin-top: 32px;
 }
+
+/* ================================================
+   REDESIGN: Process Timeline
+   ================================================ */
+.custom-process-section {
+    background: #fafaf8;
+}
+.process-timeline {
+    max-width: 780px;
+    margin: 60px auto 0;
+    position: relative;
+}
+.process-step {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 0;
+}
+.process-step-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 48px;
+}
+.process-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #c9a96e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #c9a96e;
+    letter-spacing: 0.05em;
+    background: #fff;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+.process-line {
+    width: 1px;
+    flex: 1;
+    min-height: 40px;
+    background: linear-gradient(to bottom, #c9a96e44, #c9a96e11);
+    margin: 6px 0;
+}
+.process-step-right {
+    padding-bottom: 48px;
+    flex: 1;
+}
+.process-step--last .process-step-right {
+    padding-bottom: 0;
+}
+.process-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.process-step-right h3 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0 0 10px;
+    letter-spacing: 0.01em;
+}
+.process-step-right p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.75;
+    margin: 0 0 10px;
+}
+.process-meta {
+    font-size: 0.75rem;
+    color: #aaa;
+    letter-spacing: 0.04em;
+    padding: 6px 12px;
+    border-left: 2px solid #c9a96e33;
+    margin-top: 8px;
+    font-style: italic;
+}
+.process-meta--note {
+    color: #b08a50;
+    border-left-color: #c9a96e88;
+    background: #c9a96e08;
+    border-radius: 0 4px 4px 0;
+    font-style: normal;
+}
+
+/* Notes box redesign */
+.precautions-box {
+    max-width: 780px;
+    margin: 56px auto 0;
+    border: 1px solid #e8e0d4;
+    border-radius: 2px;
+    padding: 36px 40px;
+    background: #fff;
+}
+.precautions-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0ebe3;
+}
+.precautions-header svg { color: #c9a96e; flex-shrink: 0; }
+.precautions-header h3 {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+.precautions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 40px;
+}
+.precaution-item strong {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+}
+.precaution-item p {
+    font-size: 0.83rem;
+    color: #777;
+    line-height: 1.7;
+    margin: 0;
+}
+@media (max-width: 600px) {
+    .precautions-grid { grid-template-columns: 1fr; }
+    .precautions-box { padding: 28px 24px; }
+    .process-step { gap: 20px; }
+    .process-step-right { padding-bottom: 36px; }
+}
+
+/* ================================================
+   REDESIGN: Hero Stats Bar — horizontal medals
+   ================================================ */
+.hero-stats {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 36px;
+    padding: 20px 0 0;
+    border-top: 1px solid rgba(201,169,110,0.2);
+    gap: 0;
+}
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 0 28px 0 0;
+}
+.hero-stat:first-child { padding-left: 0; }
+.stat-val {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #c9a96e;
+    letter-spacing: 0.01em;
+    line-height: 1;
+}
+.stat-label {
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #999;
+    line-height: 1;
+}
+.hero-stat-divider {
+    width: 1px;
+    background: rgba(201,169,110,0.22);
+    margin: 0 28px 0 0;
+    align-self: stretch;
+    min-height: 36px;
+}
+@media (max-width: 600px) {
+    .hero-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .hero-stat { padding: 0; }
+    .hero-stat-divider { display: none; }
+}
+
+/* ================================================
+   REDESIGN: Trust Bar — full-width centered
+   ================================================ */
+.trust-bar {
+    background: #111;
+    padding: 22px 0;
+}
+.trust-bar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+}
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 30px;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #aaa;
+    white-space: nowrap;
+}
+.trust-num {
+    color: #c9a96e;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+.trust-icon { color: #c9a96e; font-size: 0.75rem; }
+.trust-divider {
+    width: 1px;
+    height: 24px;
+    background: rgba(255,255,255,0.1);
+    flex-shrink: 0;
+}
+@media (max-width: 900px) {
+    .trust-bar-inner { gap: 4px; }
+    .trust-item { padding: 4px 16px; font-size: 0.68rem; }
+}
+@media (max-width: 600px) {
+    .trust-bar-inner { flex-wrap: wrap; justify-content: flex-start; gap: 8px 0; }
+    .trust-divider { display: none; }
+    .trust-item { padding: 4px 14px; }
+}
+
+/* ================================================
+   REDESIGN: Back to Collections button
+   ================================================ */
+.back-to-top { text-align: center; margin-top: 48px; }
+.back-to-cat-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    border: none;
+    background: none;
+    position: relative;
+}
+.back-to-cat-btn::before,
+.back-to-cat-btn::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.4;
+    transition: width 0.35s ease, opacity 0.3s ease;
+}
+.back-to-cat-btn:hover { color: #c9a96e; }
+.back-to-cat-btn:hover::before,
+.back-to-cat-btn:hover::after { width: 56px; opacity: 0.8; }
+.back-to-cat-btn .btn-arrow { display: none; }
+
+/* ================================================
+   REDESIGN: Thank You Panel
+   ================================================ */
+.inquiry-thankyou {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 64px 48px;
+    gap: 0;
+    min-height: 460px;
+    background: #fafaf8;
+}
+.ty-check svg {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 28px;
+}
+.ty-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+.ty-title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    letter-spacing: 0.01em;
+    margin: 0 0 18px;
+    line-height: 1.3;
+}
+.ty-body {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.8;
+    margin: 0 0 28px;
+    max-width: 340px;
+}
+.ty-divider {
+    width: 40px;
+    height: 1px;
+    background: #e0d8ce;
+    margin: 0 auto 20px;
+}
+.ty-sub {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #bbb;
+    margin: 0 0 16px !important;
+}
+.ty-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 32px;
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    border-radius: 1px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.ty-whatsapp:hover {
+    background: #1db954;
+    transform: translateY(-1px);
+}
