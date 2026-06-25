@@ -1714,3 +1714,138 @@ footer p {
 .whatsapp-float:hover::before {
     opacity: 1;
 }
+
+/* ================================================
+   Hero Stats Bar
+   ================================================ */
+.hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 32px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(201, 169, 110, 0.25);
+    flex-wrap: wrap;
+    gap: 8px 0;
+}
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 24px;
+}
+.hero-stat:first-child {
+    padding-left: 0;
+}
+.stat-val {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #c9a96e;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+.stat-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    white-space: nowrap;
+}
+.hero-stat-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(201, 169, 110, 0.25);
+    flex-shrink: 0;
+}
+@media (max-width: 600px) {
+    .hero-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .hero-stat-divider { display: none; }
+    .hero-stat { padding: 0; }
+}
+
+/* MOQ note */
+.moq-note {
+    margin-top: 16px;
+    font-size: 0.78rem;
+    color: #999;
+    text-align: center;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* ================================================
+   Trust Bar
+   ================================================ */
+.trust-bar {
+    background: #1a1a1a;
+    padding: 18px 0;
+    overflow: hidden;
+}
+.trust-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 0;
+}
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 24px;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #bbb;
+    white-space: nowrap;
+}
+.trust-num {
+    color: #c9a96e;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.trust-icon {
+    color: #c9a96e;
+    font-size: 0.8rem;
+}
+.trust-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(255,255,255,0.15);
+    flex-shrink: 0;
+}
+@media (max-width: 768px) {
+    .trust-bar-inner {
+        gap: 12px;
+        padding: 0 20px;
+    }
+    .trust-item { padding: 0 12px; font-size: 0.72rem; }
+    .trust-divider { display: none; }
+}
+
+/* Workflow CTA */
+.workflow-cta {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+.workflow-cta p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* MOQ CTA */
+.moq-cta {
+    text-align: center;
+    margin-top: 32px;
+}
