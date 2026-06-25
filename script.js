@@ -56,6 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 thankYouDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
 
+            if (this.dataset.nativeSubmit === 'true') {
+                HTMLFormElement.prototype.submit.call(this);
+                return;
+            }
+
             const formData = new FormData(this);
             fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', {
                 method: 'POST',

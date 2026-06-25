@@ -1053,6 +1053,13 @@ nav {
     justify-content: center;
 }
 
+.formsubmit-hidden-frame {
+    display: none;
+    width: 0;
+    height: 0;
+    border: 0;
+}
+
 .form-group {
     margin-bottom: 40px;
 }
