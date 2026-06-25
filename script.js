@@ -36,6 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 2. Handle inquiry forms with one FormSubmit request ---
     document.querySelectorAll('.inquiry-form').forEach(form => {
         form.addEventListener('submit', function(e) {
+            if (this.dataset.nativeSubmit === 'true') {
+                return;
+            }
+
             if (this.dataset.submitting === 'true') {
                 e.preventDefault();
                 return;
