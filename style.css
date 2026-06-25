@@ -2268,3 +2268,207 @@ footer p {
     background: #1db954;
     transform: translateY(-1px);
 }
+
+/* ================================================
+   MOQ Band (independent section below Hero)
+   ================================================ */
+.moq-band {
+    background: #fafaf8;
+    border-top: 1px solid #e0d8cc;
+    border-bottom: 1px solid #e0d8cc;
+    padding: 24px 0;
+}
+.moq-band-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.moq-band-label {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+.moq-big {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #c9a96e;
+    letter-spacing: 0.1em;
+}
+.moq-full {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #aaa;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+.moq-band-items {
+    display: flex;
+    align-items: stretch;
+    border-top: 1px solid #e0d8cc;
+    padding-top: 18px;
+}
+.moq-band-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0 20px;
+}
+.moq-band-item:first-child { padding-left: 0; }
+.moq-band-divider {
+    width: 1px;
+    background: #e0d8cc;
+    align-self: stretch;
+    flex-shrink: 0;
+}
+.moq-band-num {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1;
+    white-space: nowrap;
+}
+.moq-band-oem {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+}
+.moq-band-mat {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .moq-band-items { flex-wrap: wrap; gap: 16px; }
+    .moq-band-divider { display: none; }
+    .moq-band-item { flex: 1 1 40%; padding: 0; }
+}
+
+/* ================================================
+   Why Brands Choose Aiz — 6 Cards
+   ================================================ */
+.why-aiz-section {
+    background: #fafaf8;
+    padding: 72px 0;
+    border-top: 1px solid #e0d8cc;
+}
+.why-aiz-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+.why-aiz-eyebrow {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #c9a96e;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.why-aiz-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #1a1a1a;
+    letter-spacing: 0.01em;
+}
+.why-aiz-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.why-card {
+    background: #fff;
+    border: 1px solid #e0d8cc;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.why-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: #c9a96e;
+}
+.why-card-icon {
+    width: 48px; height: 48px;
+    border: 1.5px solid #c9a96e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+.why-card-icon svg {
+    width: 22px; height: 22px;
+}
+.why-card-val {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+.why-card-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+.why-card-desc {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.78rem;
+    color: #777;
+    line-height: 1.7;
+    flex: 1;
+    margin-bottom: 16px;
+}
+.why-card-tag {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.64rem;
+    font-weight: 600;
+    color: #c9a96e;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding-top: 12px;
+    border-top: 1px solid #e8e2d8;
+    line-height: 2;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .why-aiz-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+    .why-aiz-grid { grid-template-columns: 1fr; }
+}
+
+/* Section Label font fix — no serif numbers */
+.category-badge {
+    font-family: 'Helvetica Neue', Arial, sans-serif !important;
+}
