@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- 2. 统一处理全站所有询盘表单 (首页底部和独立页) ---
     // --- 2. Handle inquiry forms with one FormSubmit request ---
-    document.querySelectorAll('.inquiry-form').forEach(form => {
+    document.querySelectorAll('.inquiry-form:not([data-native-submit="true"])').forEach(form => {
         form.addEventListener('submit', function(e) {
             if (this.dataset.nativeSubmit === 'true') {
                 return;
