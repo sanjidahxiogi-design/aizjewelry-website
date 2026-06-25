@@ -1607,3 +1607,110 @@ footer p {
     border-radius: 0;
     margin-top: 20px;
 }
+
+/* ================================================
+   CUSTOM ADDITIONS: Back button / WhatsApp / Thank You
+   ================================================ */
+
+/* Back to Collections button */
+.back-to-cat-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 28px;
+    border: 1px solid #c9a96e;
+    color: #c9a96e;
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+.back-to-cat-btn:hover {
+    background: #c9a96e;
+    color: #fff;
+}
+.back-to-cat-btn .btn-arrow {
+    font-size: 1rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+.back-to-cat-btn:hover .btn-arrow {
+    transform: translateY(-2px);
+}
+
+/* Thank You panel */
+.inquiry-thankyou {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 40px;
+    gap: 16px;
+    min-height: 420px;
+}
+.ty-icon svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+}
+.inquiry-thankyou h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--dark);
+    margin: 0;
+}
+.inquiry-thankyou p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+}
+.ty-sub {
+    font-size: 0.8rem !important;
+    color: #aaa !important;
+}
+.ty-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 12px 28px;
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 2px;
+    transition: background 0.3s ease;
+}
+.ty-whatsapp:hover {
+    background: #1da851;
+}
+
+/* WhatsApp float tooltip */
+.whatsapp-float {
+    position: relative;
+}
+.whatsapp-float::before {
+    content: 'Chat on WhatsApp Web';
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    padding: 5px 10px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+.whatsapp-float:hover::before {
+    opacity: 1;
+}
