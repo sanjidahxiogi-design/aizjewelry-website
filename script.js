@@ -36,8 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 2. Handle inquiry forms with one FormSubmit request ---
     document.querySelectorAll('.inquiry-form').forEach(form => {
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            if (this.dataset.submitting === 'true') return;
+            if (this.dataset.submitting === 'true') {
+                e.preventDefault();
+                return;
+            }
             this.dataset.submitting = 'true';
 
             const submitButton = this.querySelector('[type="submit"]');
@@ -57,10 +59,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (this.dataset.nativeSubmit === 'true') {
-                HTMLFormElement.prototype.submit.call(this);
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submission_web', {
+                        'event_category': 'Inquiry',
+                        'event_label': 'FormSubmit'
+                    });
+                }
                 return;
             }
 
+            e.preventDefault();
             const formData = new FormData(this);
             fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', {
                 method: 'POST',

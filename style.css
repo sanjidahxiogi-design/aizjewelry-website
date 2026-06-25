@@ -1053,6 +1053,13 @@ nav {
     justify-content: center;
 }
 
+.contact-form-panel {
+    background: #fff;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 .formsubmit-hidden-frame {
     display: none;
     width: 0;
@@ -1189,6 +1196,13 @@ nav {
 .inquiry-form .file-input:hover {
     border-color: var(--primary);
     background: #fdfaf5;
+}
+
+.file-note {
+    font-size: 0.72rem;
+    color: #999;
+    line-height: 1.5;
+    margin-top: 10px;
 }
 
 /* Footer */
@@ -1478,6 +1492,7 @@ footer p {
     .contact-item strong { font-size: 1.1rem; }
     .whatsapp-secure-btn { width: 100%; justify-content: center; }
     
+    .contact-form-panel { width: 100%; }
     .inquiry-form { padding: 40px 20px; }
     .form-group { margin-bottom: 25px; }
     .inquiry-form .btn.primary { padding: 18px; letter-spacing: 4px; }
