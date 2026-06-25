@@ -2028,27 +2028,28 @@ footer p {
     border-top: 1px solid rgba(201,169,110,0.2);
 }
 .hero-stats-moq-label {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #e8c47a;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #c9a96e;
+    letter-spacing: 0.1em;
     margin-bottom: 14px;
     display: flex;
     align-items: baseline;
-    gap: 12px;
+    gap: 14px;
 }
 .hero-stats-moq-label span {
-    font-size: 0.68rem;
-    font-weight: 400;
-    color: #666;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.4);
     letter-spacing: 0.14em;
+    text-transform: uppercase;
 }
 .hero-stats-row {
     display: flex;
     align-items: stretch;
-    border-top: 1px solid rgba(201,169,110,0.12);
-    padding-top: 16px;
+    border-top: 1px solid rgba(201,169,110,0.15);
+    padding-top: 18px;
 }
 .hero-stat {
     display: flex;
@@ -2061,32 +2062,38 @@ footer p {
 }
 .hero-stat:first-child { padding-left: 0; }
 .stat-val {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 2rem;
-    font-weight: 700;
-    color: #e8c47a;
+    font-weight: 800;
+    color: #fff;
     letter-spacing: 0;
     line-height: 1;
+    white-space: nowrap;
 }
 .stat-val-oem {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #e8c47a;
-    letter-spacing: 0.01em;
-    line-height: 1;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0;
+    line-height: 1.2;
     text-align: center;
+    white-space: nowrap;
 }
 .stat-label {
-    font-size: 0.62rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #aaa;
+    color: rgba(255,255,255,0.55);
     line-height: 1;
     text-align: center;
     white-space: nowrap;
 }
 .hero-stat-divider {
     width: 1px;
-    background: rgba(201,169,110,0.15);
+    background: rgba(201,169,110,0.2);
     align-self: stretch;
     flex-shrink: 0;
 }
@@ -2098,7 +2105,7 @@ footer p {
         border-top: none;
         padding-top: 12px;
     }
-    .hero-stat { padding: 0; align-items: flex-start; }
+    .hero-stat { padding: 0; align-items: center; }
     .hero-stat-divider { display: none; }
     .stat-val { font-size: 1.5rem; }
 }
