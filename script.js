@@ -36,52 +36,53 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- 2. Handle inquiry forms with one FormSubmit request ---
     document.querySelectorAll('.inquiry-form').forEach(form => {
         form.addEventListener('submit', function(e) {
-            if (this.dataset.submitting === 'true') {
-                e.preventDefault();
-                return;
-            }
+            e.preventDefault();
+
+            if (this.dataset.submitting === 'true') return;
             this.dataset.submitting = 'true';
 
             const submitButton = this.querySelector('[type="submit"]');
-            if (submitButton) submitButton.disabled = true;
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+            }
 
-            const formContainer = this.parentElement;
+            // 找感谢 div：优先用 data-thankyou-target，否则找同级 .thank-you-inline
             const targetId = this.getAttribute('data-thankyou-target');
             const thankYouDiv = targetId
                 ? document.getElementById(targetId)
-                : formContainer.querySelector('.thank-you-inline');
+                : this.parentElement.querySelector('.thank-you-inline');
 
-            this.style.setProperty('display', 'none', 'important');
-            if (thankYouDiv) {
-                const displayMode = targetId ? 'flex' : 'block';
-                thankYouDiv.style.setProperty('display', displayMode, 'important');
-                thankYouDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+            // 用 FormData 直接从表单构建，确保附件包含在内
+            const formData = new FormData(this);
 
-            if (this.dataset.nativeSubmit === 'true') {
+            fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(function() {
+                // 成功后显示感谢界面
+                form.style.setProperty('display', 'none', 'important');
+                form.style.setProperty('display', 'none', 'important');
+                if (thankYouDiv) {
+                    thankYouDiv.style.setProperty('display', 'flex', 'important');
+                    thankYouDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'form_submission_web', {
                         'event_category': 'Inquiry',
                         'event_label': 'FormSubmit'
                     });
                 }
-                return;
-            }
-
-            e.preventDefault();
-            const formData = new FormData(this);
-            fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
+            }).catch(function() {
+                // 失败时恢复按钮
+                form.dataset.submitting = 'false';
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Inquire Now';
+                }
+                alert('Something went wrong. Please try again or email us directly at sales@aizjewelry.com');
             });
-
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'form_submission_web', {
-                    'event_category': 'Inquiry',
-                    'event_label': 'FormSubmit'
-                });
-            }
         });
     });
 
@@ -101,11 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // 后台异步发送
             const formData = new FormData(this);
-            fetch('https://formsubmit.co/ajax/sales@aizjewelry.com', {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            });
         });
     });
 
