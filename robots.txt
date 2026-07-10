@@ -14,9 +14,6 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-User-agent: CloudflareBrowserRenderingCrawler
-Disallow: /
-
 User-agent: Google-Extended
 Allow: /
 
