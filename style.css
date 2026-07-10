@@ -1361,6 +1361,9 @@ footer p {
 }
 
 .current-lang {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -1368,6 +1371,10 @@ footer p {
     border: 1px solid rgba(197, 160, 89, 0.3);
     border-radius: 2px;
 }
+.current-lang .ti-world { font-size: 15px; opacity: 0.8; }
+.current-lang .lang-label { font-size: 0.85rem; font-weight: 700; letter-spacing: 1px; }
+.current-lang .lang-arrow { font-size: 12px; opacity: 0.6; transition: transform 0.2s; }
+.lang-switcher:hover .lang-arrow { transform: rotate(180deg); }
 
 .lang-dropdown {
     position: absolute;
@@ -1431,7 +1438,9 @@ footer p {
         border: 1px solid var(--primary);
         flex-shrink: 0;
     }
-    .current-lang { padding: 0; font-size: 0.65rem; color: var(--primary); font-weight: 800; border: none; }
+    .current-lang { padding: 0; gap: 4px; font-size: 0.65rem; color: var(--primary); font-weight: 800; border: none; }
+    .current-lang .ti-world { font-size: 13px; }
+    .current-lang .lang-arrow { font-size: 11px; }
     .lang-dropdown { min-width: 110px; right: 0; display: none; }
     
     .lang-switcher.active .lang-dropdown {
