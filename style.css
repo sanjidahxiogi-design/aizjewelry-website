@@ -2534,8 +2534,8 @@ footer p {
     display: flex;
     flex-direction: column;
 }
-.sp-img-wrap { width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #f5f0e8; }
-.sp-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sp-img-wrap { width: 100%; overflow: hidden; background: #f5f0e8; }
+.sp-img-wrap img { width: 100%; height: auto; display: block; }
 .sp-body { padding: 24px 24px 16px; flex: 1; }
 .sp-badge {
     display: inline-block;
@@ -2604,8 +2604,8 @@ footer p {
     margin-top: auto;
 }
 .sp-footer-item { display: flex; flex-direction: column; flex: 1; }
-.sp-footer-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: #888; text-transform: uppercase; }
-.sp-footer-value { font-size: 13px; font-weight: 600; color: #f0ece4; margin-top: 2px; }
+.sp-footer-label { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: #aaa; text-transform: uppercase; }
+.sp-footer-value { font-size: 16px; font-weight: 700; color: #f0ece4; margin-top: 4px; }
 .sp-arrow { color: var(--primary); font-size: 18px; font-weight: 700; flex-shrink: 0; }
 @media (max-width: 768px) {
     .service-path-grid-v2 { grid-template-columns: 1fr; }
