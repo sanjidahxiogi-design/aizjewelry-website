@@ -128,7 +128,7 @@
     <meta property="og:url" content="https://www.aizjewelry.com/custom-jewelry-service">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="style.css?v=2.2">
+    <link rel="stylesheet" href="style.css?v=2.3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -273,56 +273,61 @@
             <div class="quote-img-wrap">
                 <img src="images/material-comparison.png" alt="Stainless Steel SUS304 SUS316 vs S925 Sterling Silver vs Solid K Gold 9K 14K 18K — MOQ, lead time, key strengths, plating and finish comparison for custom jewelry manufacturer China" loading="lazy">
             </div>
-            <div class="seo-table-hidden" aria-hidden="true">
-                <table>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Stainless Steel (SUS304 / SUS316)</th>
-                            <th>S925 Sterling Silver</th>
-                            <th>Solid K Gold (9K / 14K / 18K)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>MOQ per style</td>
-                            <td>100 pcs</td>
-                            <td>30 pcs</td>
-                            <td>1 pc</td>
-                        </tr>
-                        <tr>
-                            <td>Lead time</td>
-                            <td>From 5 weeks</td>
-                            <td>From 3 weeks</td>
-                            <td>From 2 weeks</td>
-                        </tr>
-                        <tr>
-                            <td>Key strengths</td>
-                            <td>Waterproof · tarnish free · sweat proof · hypoallergenic</td>
-                            <td>Classic boutique feel · hand-set stones · fine detail work</td>
-                            <td>Fine jewelry value · full material certification</td>
-                        </tr>
-                        <tr>
-                            <td>Plating / finish</td>
-                            <td>18K gold PVD plating (ion plating): gold, rose gold, silver, black</td>
-                            <td>14K / 18K gold plating, rhodium, high polish</td>
-                            <td>Natural gold color, high-mirror polish</td>
-                        </tr>
-                        <tr>
-                            <td>Best for</td>
-                            <td>Everyday-wear brands, men's lines, gym &amp; beach brands, Amazon / Shopify sellers</td>
-                            <td>Boutique collections, designer brands, gift lines</td>
-                            <td>Fine jewelry brands, private commissions, testing high-value designs</td>
-                        </tr>
-                        <tr>
-                            <td>Export &amp; customs</td>
-                            <td>Easiest clearance worldwide</td>
-                            <td>Straightforward with declaration</td>
-                            <td>Handled with full certification paperwork</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>Not sure which material fits your brand? Tell us your target retail price and market — we'll recommend the line that protects your margin.</p>
+            <div class="collapsible-seo-wrap">
+                <button class="collapsible-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')" aria-expanded="false">
+                    View full comparison table <i class="ti ti-chevron-down"></i>
+                </button>
+                <div class="collapsible-content">
+                    <table class="moq-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Stainless Steel (SUS304 / SUS316)</th>
+                                <th>S925 Sterling Silver</th>
+                                <th>Solid K Gold (9K / 14K / 18K)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>MOQ per style</strong></td>
+                                <td>100 pcs</td>
+                                <td>30 pcs</td>
+                                <td>1 pc</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lead time</strong></td>
+                                <td>From 5 weeks</td>
+                                <td>From 3 weeks</td>
+                                <td>From 2 weeks</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Key strengths</strong></td>
+                                <td>Waterproof · tarnish free · sweat proof · hypoallergenic</td>
+                                <td>Classic boutique feel · hand-set stones · fine detail work</td>
+                                <td>Fine jewelry value · full material certification</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plating / finish</strong></td>
+                                <td>18K gold PVD plating (ion plating): gold, rose gold, silver, black</td>
+                                <td>14K / 18K gold plating, rhodium, high polish</td>
+                                <td>Natural gold color, high-mirror polish</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Best for</strong></td>
+                                <td>Everyday-wear brands, men's lines, gym &amp; beach brands, Amazon / Shopify sellers</td>
+                                <td>Boutique collections, designer brands, gift lines</td>
+                                <td>Fine jewelry brands, private commissions, testing high-value designs</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Export &amp; customs</strong></td>
+                                <td>Easiest clearance worldwide</td>
+                                <td>Straightforward with declaration</td>
+                                <td>Handled with full certification paperwork</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="moq-note">Not sure which material fits your brand? Tell us your target retail price and market — we'll recommend the line that protects your margin.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -332,42 +337,54 @@
         <div class="container">
             <div class="section-header">
                 <h2>What's Inside a Custom Jewelry Quote</h2>
-                <p>Most factories keep this vague. We'd rather you know exactly what you're paying for — before you commit to anything.</p>
+                <p>We'd rather you know exactly what you're paying for — before you commit to anything.</p>
             </div>
             <div class="quote-img-wrap">
                 <img src="images/quote-breakdown.png" alt="Custom jewelry quote breakdown — 3D Design Render JCAD picture fee, mold development, sample fee, unit price, international shipping DAP DDP explained" loading="lazy">
             </div>
-            <div class="seo-table-hidden" aria-hidden="true">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>3D Design Render / JCAD picture</td>
-                            <td>One-time, per style</td>
-                            <td>Design fee required to commence. We begin work upon payment and include one round of minor revisions after the initial draft. Major structural or stylistic changes incur additional fees based on complexity.</td>
-                        </tr>
-                        <tr>
-                            <td>Mold development</td>
-                            <td>One-time, per style</td>
-                            <td>Paid once when a new style enters production. Reorders of the same style never pay it again.</td>
-                        </tr>
-                        <tr>
-                            <td>Sample fee</td>
-                            <td>One-time, per style</td>
-                            <td>Covers the cost of a physical prototype before mass production.</td>
-                        </tr>
-                        <tr>
-                            <td>Unit price</td>
-                            <td>Per piece</td>
-                            <td>Based on metal weight, stone specs, and craftsmanship. Better pricing for higher volumes.</td>
-                        </tr>
-                        <tr>
-                            <td>International shipping</td>
-                            <td>Quoted per shipment</td>
-                            <td>Calculated separately for each batch based on weight, dimensions, and method (International Express or Freight Forwarder). Terms: typically DAP (Delivery at Place, duties unpaid). DDP (Delivered Duty Paid) available for select countries. Note: excludes destination import duties, VAT, and local clearance fees.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>Every quote is itemized line by line and delivered within 1–2 business days. Note: once a master mold is opened, structural changes are not possible — we always ask you to confirm the 3D Design Render or JCAD picture carefully first.</p>
+            <div class="collapsible-seo-wrap">
+                <button class="collapsible-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')" aria-expanded="false">
+                    View full quote breakdown <i class="ti ti-chevron-down"></i>
+                </button>
+                <div class="collapsible-content">
+                    <table class="moq-table">
+                        <thead>
+                            <tr>
+                                <th>Cost item</th>
+                                <th>Type</th>
+                                <th>How it works</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>3D Design Render / JCAD picture</strong></td>
+                                <td>One-time, per style</td>
+                                <td>Design fee required to commence. We begin work upon payment and include one round of minor revisions after the initial draft. Major structural or stylistic changes incur additional fees based on complexity.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mold development</strong></td>
+                                <td>One-time, per style</td>
+                                <td>Paid once when a new style enters production. Reorders of the same style never pay it again.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sample fee</strong></td>
+                                <td>One-time, per style</td>
+                                <td>Covers the cost of a physical prototype before mass production.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Unit price</strong></td>
+                                <td>Per piece</td>
+                                <td>Based on metal weight, stone specs, and craftsmanship. Better pricing for higher volumes.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>International shipping</strong></td>
+                                <td>Quoted per shipment</td>
+                                <td>Calculated separately for each batch based on weight, dimensions, and method (International Express or Freight Forwarder). Terms: typically DAP (Delivery at Place, duties unpaid). DDP (Delivered Duty Paid) available for select countries. Note: excludes destination import duties, VAT, and local clearance fees.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="moq-note">Every quote is itemized line by line and delivered within 1–2 business days. Note: once a master mold is opened, structural changes are not possible — we always ask you to confirm the 3D Design Render or JCAD picture carefully first.</p>
+                </div>
             </div>
         </div>
     </section>

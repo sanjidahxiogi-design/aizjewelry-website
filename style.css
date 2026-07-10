@@ -2692,3 +2692,30 @@ footer p {
     white-space: nowrap;
     border: 0;
 }
+
+.collapsible-seo-wrap { margin-top: 1.5rem; }
+.collapsible-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: 1px solid #e0d0b0;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #b8975a;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: background 0.2s;
+}
+.collapsible-toggle:hover { background: #faf7f0; }
+.collapsible-toggle .ti-chevron-down { transition: transform 0.2s; }
+.collapsible-toggle.open .ti-chevron-down { transform: rotate(180deg); }
+.collapsible-content {
+    display: none;
+    margin-top: 1.5rem;
+    overflow-x: auto;
+}
+.collapsible-content.open { display: block; }
+.seo-table-hidden { display: none; }
