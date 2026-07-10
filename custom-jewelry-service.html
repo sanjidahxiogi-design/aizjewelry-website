@@ -128,7 +128,8 @@
     <meta property="og:url" content="https://www.aizjewelry.com/custom-jewelry-service">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="style.css?v=1.8">
+    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="service-page">
@@ -150,7 +151,11 @@
                 </ul>
 
                 <div class="lang-switcher">
-                    <span class="current-lang">EN</span>
+                    <span class="current-lang">
+                        <i class="ti ti-world"></i>
+                        <span class="lang-label">EN</span>
+                        <i class="ti ti-chevron-down lang-arrow"></i>
+                    </span>
                     <div class="lang-dropdown">
                         <a href="/">English</a>
                         <a href="/es/">Español</a>
@@ -326,39 +331,8 @@
                 <h2>What's Inside a Custom Jewelry Quote</h2>
                 <p>Most factories keep this vague. We'd rather you know exactly what you're paying for — before you commit to anything.</p>
             </div>
-            <div class="table-wrapper">
-                <table class="moq-table">
-                    <thead>
-                        <tr>
-                            <th>Cost item</th>
-                            <th>Type</th>
-                            <th>How it works</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>3D CAD design</strong></td>
-                            <td>Included</td>
-                            <td>Free with every project. Unlimited reasonable revisions until you approve the model.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Mold development</strong></td>
-                            <td>One-time, per style</td>
-                            <td>Paid once when a new style enters production. Reorders of the same style never pay it again.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sample fee</strong></td>
-                            <td>One-time, per style</td>
-                            <td>Covers the physical prototype you approve before batch production.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Per-piece price</strong></td>
-                            <td>Per unit</td>
-                            <td>Depends on material weight, stones, and finish. Decreases as quantity grows.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="moq-note">Every quote is itemized line by line and delivered within 1&ndash;2 business days. Note: once a master mold is opened, structural changes are not possible — we always ask you to confirm the CAD file carefully first.</p>
+            <div class="quote-img-wrap">
+                <img src="images/quote-breakdown.png" alt="Custom jewelry quote breakdown — 3D design fee, mold development, sample fee, unit price and international shipping explained" loading="lazy">
             </div>
         </div>
     </section>

@@ -2619,3 +2619,6 @@ footer p {
 @media (max-width: 768px) {
     .service-path-grid-v2 { grid-template-columns: 1fr; }
 }
+
+.quote-img-wrap { width: 100%; margin-top: 2rem; }
+.quote-img-wrap img { width: 100%; height: auto; display: block; border-radius: 12px; }
