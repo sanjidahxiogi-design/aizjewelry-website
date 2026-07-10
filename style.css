@@ -2622,3 +2622,61 @@ footer p {
 
 .quote-img-wrap { width: 100%; margin-top: 2rem; }
 .quote-img-wrap img { width: 100%; height: auto; display: block; border-radius: 12px; }
+
+.material-table thead th {
+    background: #1a1a1a;
+    color: #b8975a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    vertical-align: top;
+}
+.material-table thead th .mat-name {
+    display: block;
+    color: #b8975a;
+    font-size: 13px;
+    font-weight: 700;
+}
+.material-table thead th .mat-sub {
+    display: block;
+    color: #888;
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 4px;
+    letter-spacing: 0.04em;
+}
+.material-table tbody td {
+    font-size: 14px;
+    color: #3a3a3a;
+    padding: 14px 20px;
+    vertical-align: top;
+    border-bottom: 1px solid #f0ebe0;
+    line-height: 1.55;
+}
+.mat-row-label { font-weight: 700; color: #1a1a1a; white-space: nowrap; }
+.mat-note { font-size: 14px; margin-top: 1.5rem; }
+.quote-table thead th {
+    background: #1a1a1a;
+    color: #b8975a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 16px 20px;
+}
+.quote-table tbody td {
+    font-size: 14px;
+    color: #3a3a3a;
+    padding: 14px 20px;
+    vertical-align: top;
+    border-bottom: 1px solid #f0ebe0;
+    line-height: 1.6;
+}
+.quote-table tbody tr:last-child td { border-bottom: none; }
+@media (max-width: 768px) {
+    .material-table, .quote-table { font-size: 13px; }
+    .material-table thead th, .quote-table thead th { padding: 12px 10px; }
+    .material-table tbody td, .quote-table tbody td { padding: 10px; }
+}
