@@ -12,10 +12,24 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-FP875E408D');
-      gtag('event', 'thank_you_view', {
-        event_category: 'lead',
-        event_label: 'FormSubmit thank-you page'
+      async function initGa4Config() {
+        const configParams = {};
+        try {
+          const response = await fetch('/cdn-cgi/trace', { cache: 'no-store' });
+          const trace = await response.text();
+          const ipMatch = trace.match(/^ip=(.+)$/m);
+          const visitorIp = ipMatch ? ipMatch[1].trim() : '';
+          if (visitorIp === '14.127.70.180') {
+            configParams.traffic_type = 'internal';
+          }
+        } catch (error) {}
+        gtag('config', 'G-FP875E408D', configParams);
+      }
+      initGa4Config().then(function() {
+        gtag('event', 'thank_you_view', {
+          event_category: 'lead',
+          event_label: 'FormSubmit thank-you page'
+        });
       });
     </script>
     <style>

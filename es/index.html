@@ -15,7 +15,20 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-FP875E408D');
+      async function initGa4Config() {
+        const configParams = {};
+        try {
+          const response = await fetch('/cdn-cgi/trace', { cache: 'no-store' });
+          const trace = await response.text();
+          const ipMatch = trace.match(/^ip=(.+)$/m);
+          const visitorIp = ipMatch ? ipMatch[1].trim() : '';
+          if (visitorIp === '14.127.70.180') {
+            configParams.traffic_type = 'internal';
+          }
+        } catch (error) {}
+        gtag('config', 'G-FP875E408D', configParams);
+      }
+      initGa4Config();
     </script>
 
     <!-- Hreflang Tags for Multi-language SEO -->
