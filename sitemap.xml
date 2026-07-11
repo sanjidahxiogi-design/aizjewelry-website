@@ -110,17 +110,17 @@
 
   <!-- Industrial Insights Blog Pages -->
   <url>
-    <loc>https://www.aizjewelry.com/blog-9k-14k-18k-solid-gold.html</loc>
+    <loc>https://www.aizjewelry.com/blog-9k-14k-18k-solid-gold</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-9k-14k-18k-solid-gold.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aizjewelry.com/blog-9k-14k-18k-solid-gold.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-9k-14k-18k-solid-gold"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aizjewelry.com/blog-9k-14k-18k-solid-gold"/>
   </url>
 
   <url>
     <loc>https://www.aizjewelry.com/blog-sus304-vs-316l</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-sus304-vs-316l"/>
@@ -131,15 +131,6 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://www.aizjewelry.com/jp/blog-sus304-vs-316l"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.aizjewelry.com/kr/blog-sus304-vs-316l"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aizjewelry.com/blog-sus304-vs-316l"/>
-  </url>
-
-  <url>
-    <loc>https://www.aizjewelry.com/blog-sus304-vs-316l.html</loc>
-    <lastmod>2026-07-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-sus304-vs-316l.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aizjewelry.com/blog-sus304-vs-316l.html"/>
   </url>
 
   <url>
@@ -233,15 +224,6 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/custom-jewelry-service"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aizjewelry.com/custom-jewelry-service"/>
-  </url>
-
-  <url>
-    <loc>https://www.aizjewelry.com/custom-jewelry-service.html</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/custom-jewelry-service.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aizjewelry.com/custom-jewelry-service.html"/>
   </url>
 
 </urlset>
