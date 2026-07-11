@@ -110,6 +110,15 @@
 
   <!-- Industrial Insights Blog Pages -->
   <url>
+    <loc>https://www.aizjewelry.com/blog-9k-14k-18k-solid-gold.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.aizjewelry.com/blog-9k-14k-18k-solid-gold.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aizjewelry.com/blog-9k-14k-18k-solid-gold.html"/>
+  </url>
+
+  <url>
     <loc>https://www.aizjewelry.com/blog-sus304-vs-316l</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
