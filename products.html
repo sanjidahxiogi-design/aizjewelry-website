@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -191,11 +191,20 @@
                 count.textContent = visible;
             }
 
+            function setActiveButton(buttons, attribute, value) {
+                const target = Array.from(buttons).find(function(button) {
+                    return button.dataset[attribute] === value;
+                });
+                if (!target) return false;
+                buttons.forEach(function(item) { item.classList.remove('active'); });
+                target.classList.add('active');
+                return true;
+            }
+
             materialButtons.forEach(function(button) {
                 button.addEventListener('click', function() {
                     activeMaterial = button.dataset.materialFilter;
-                    materialButtons.forEach(function(item) { item.classList.remove('active'); });
-                    button.classList.add('active');
+                    setActiveButton(materialButtons, 'materialFilter', activeMaterial);
                     updateCatalog();
                 });
             });
@@ -203,11 +212,21 @@
             categoryButtons.forEach(function(button) {
                 button.addEventListener('click', function() {
                     activeCategory = button.dataset.categoryFilter;
-                    categoryButtons.forEach(function(item) { item.classList.remove('active'); });
-                    button.classList.add('active');
+                    setActiveButton(categoryButtons, 'categoryFilter', activeCategory);
                     updateCatalog();
                 });
             });
+
+            const params = new URLSearchParams(window.location.search);
+            const materialParam = params.get('material');
+            const categoryParam = params.get('category');
+            if (materialParam && setActiveButton(materialButtons, 'materialFilter', materialParam)) {
+                activeMaterial = materialParam;
+            }
+            if (categoryParam && setActiveButton(categoryButtons, 'categoryFilter', categoryParam)) {
+                activeCategory = categoryParam;
+            }
+            updateCatalog();
         });
     </script>
 </body>
