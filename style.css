@@ -2882,20 +2882,28 @@ footer p {
 }
 
 .catalog-layout {
-    display: grid;
-    grid-template-columns: 250px minmax(0, 1fr);
+    display: flex;
     gap: 42px;
     align-items: start;
+}
+
+.catalog-results {
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 .catalog-sidebar {
     position: sticky;
     top: 120px;
     align-self: flex-start;
+    flex: 0 0 250px;
+    width: 250px;
     min-width: 200px;
+    max-height: calc(100vh - 140px);
     border: 1px solid #e8dcc8;
     background: #faf7f2;
     padding: 20px;
+    overflow-y: auto;
 }
 
 .catalog-sidebar-title {
@@ -2939,9 +2947,11 @@ footer p {
 .catalog-card {
     background: #fff;
     border: 1px solid #e8dcc8;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     min-width: 0;
+    overflow: hidden;
     box-shadow: 0 12px 28px rgba(58, 46, 30, 0.06);
     opacity: 1;
     transform: none;
@@ -2972,6 +2982,7 @@ footer p {
     aspect-ratio: 1 / 1;
     background: #f6f6f6;
     overflow: hidden;
+    border-radius: 12px 12px 0 0;
 }
 
 .catalog-card-image img {
@@ -3197,7 +3208,7 @@ footer p {
         gap: 0;
     }
     .catalog-layout {
-        grid-template-columns: 1fr;
+        display: block;
         gap: 24px;
     }
     .catalog-sidebar {
@@ -3205,6 +3216,10 @@ footer p {
         display: flex;
         gap: 8px;
         overflow-x: auto;
+        max-height: none;
+        overflow-y: visible;
+        width: auto;
+        flex: 0 0 auto;
         padding: 14px;
     }
     .catalog-sidebar-title {
