@@ -58,7 +58,7 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="../../style.css?v=53.0">
+    <link rel="stylesheet" href="../../style.css?v=54.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -74,7 +74,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/custom-jewelry-service">Custom Jewelry Service</a></li>
-                    <li><a href="/#blog">Blog</a></li>
+                    <li><a href="/blog">Blog</a></li>
                     <li><a href="/#about">About Us</a></li>
                     <li><a href="/contact.html">Contact</a></li>
                 </ul>
@@ -228,9 +228,9 @@
                 <i class="ti ti-brand-whatsapp"></i>
                 <span>WhatsApp</span>
             </a>
-            <a class="product-float product-float-email" href="mailto:sales@aizjewelry.com?subject=Inquiry%20for%20Custom%20Stone-Set%20Huggie%20Earrings&amp;body=Hi%20Aiz%20Jewelry%2C%0A%0AI%20am%20interested%20in%20Custom%20Stone-Set%20Huggie%20Earrings.%20Please%20share%20MOQ%2C%20lead%20time%2C%20surface%20options%2C%20and%20next%20steps." target="_blank" rel="noopener noreferrer">
+                        <a class="product-float product-float-email" href="/custom-jewelry-service#service-contact">
                 <i class="ti ti-mail"></i>
-                <span>Email</span>
+                <span>Get a Quote</span>
             </a>
         </div>
     </div>
@@ -242,6 +242,22 @@
         </div>
     </footer>
 
-    <script src="../../script.js?v=30.3"></script>
+    <script src="../../script.js?v=30.3"></script>    <button onclick="scrollToTop()" id="back-to-top" class="back-to-top-float" title="Back to Top">
+        <svg viewBox="0 0 448 512"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L256 161.3V464c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V161.3L53.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+    </button>    <script>
+        (function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (!backToTopBtn) return;
+            window.addEventListener('scroll', function() {
+                backToTopBtn.classList.toggle('show', window.scrollY > 400);
+            }, { passive: true });
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('show');
+            }
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+    </script>
 </body>
 </html>

@@ -15,7 +15,7 @@
       "description": "Custom jewelry product categories by material, MOQ, lead time, and product category options for B2B buyers."
     }
     </script>
-    <link rel="stylesheet" href="style.css?v=53.0">
+    <link rel="stylesheet" href="style.css?v=54.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -31,7 +31,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/custom-jewelry-service">Custom Jewelry Service</a></li>
-                    <li><a href="/#blog">Blog</a></li>
+                    <li><a href="/blog">Blog</a></li>
                     <li><a href="/#about">About Us</a></li>
                     <li><a href="/contact.html">Contact</a></li>
                 </ul>
@@ -341,10 +341,8 @@
                 </a>
             </div>
         </div>
-        <button id="back-to-top" aria-label="Back to top">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="18 15 12 9 6 15"/>
-            </svg>
+        <button onclick="scrollToTop()" id="back-to-top" class="back-to-top-float" title="Back to Top">
+            <svg viewBox="0 0 448 512"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L256 161.3V464c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V161.3L53.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
         </button>
     </main>
 
@@ -474,10 +472,14 @@
             revealCatalogCards();
             updateCatalog();
 
+            function scrollToTop() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
             const backToTopBtn = document.getElementById('back-to-top');
             if (backToTopBtn) {
                 const toggleBackToTop = function() {
-                    backToTopBtn.classList.toggle('visible', window.scrollY > 300);
+                    backToTopBtn.classList.toggle('show', window.scrollY > 300);
                 };
                 window.addEventListener('scroll', toggleBackToTop, { passive: true });
                 toggleBackToTop();
