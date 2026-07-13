@@ -1210,9 +1210,9 @@ nav {
 }
 
 .back-to-top-float {
-    background-color: #f7f4ee;
+    background-color: #2c2c2c;
     border: 1px solid #e8dcc8;
-    color: #2c2c2c;
+    color: #ffffff;
     visibility: hidden;
     opacity: 0;
 }
