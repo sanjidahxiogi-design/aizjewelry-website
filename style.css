@@ -763,7 +763,7 @@ nav {
 }
 
 .product-card-features li::before {
-    content: "•";
+    content: "鈥?;
     color: var(--primary);
 }
 
@@ -2164,7 +2164,7 @@ footer p {
 }
 
 /* ================================================
-   REDESIGN: Hero Stats Bar — horizontal medals
+   REDESIGN: Hero Stats Bar 鈥?horizontal medals
    ================================================ */
 .hero-stats {
     display: flex;
@@ -2257,7 +2257,7 @@ footer p {
 }
 
 /* ================================================
-   REDESIGN: Trust Bar — full-width centered
+   REDESIGN: Trust Bar 鈥?full-width centered
    ================================================ */
 .trust-bar {
     background: #111;
@@ -2508,7 +2508,7 @@ footer p {
 }
 
 /* ================================================
-   Why Brands Choose Aiz — 6 Cards
+   Why Brands Choose Aiz 鈥?6 Cards
    ================================================ */
 .why-aiz-section {
     background: #fafaf8;
@@ -2614,7 +2614,7 @@ footer p {
     .why-aiz-grid { grid-template-columns: 1fr; }
 }
 
-/* Section Label font fix — no serif numbers */
+/* Section Label font fix 鈥?no serif numbers */
 .category-badge {
     font-family: 'Helvetica Neue', Arial, sans-serif !important;
 }
@@ -2678,7 +2678,7 @@ footer p {
     position: relative;
 }
 .sp-list li::before {
-    content: '✓';
+    content: '鉁?;
     position: absolute;
     left: 0;
     color: var(--primary);
@@ -3027,6 +3027,8 @@ footer p {
     display: flex;
     flex-direction: row;
     gap: 12px;
+    justify-content: center;
+    align-items: flex-start;
     margin: 4px 0 18px;
 }
 
@@ -3135,6 +3137,22 @@ footer p {
 .catalog-card-cta:hover {
     background: #c9a84c;
     color: #faf7f2;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #8a7a65;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+.back-btn:hover {
+    color: #c9a84c;
 }
 
 .catalog-card-cta-primary:hover {
