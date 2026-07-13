@@ -1,4 +1,4 @@
-# Aiz Jewelry — llms.txt
+﻿# Aiz Jewelry — llms.txt
 # https://www.aizjewelry.com
 # Last updated: 2026-07-11
 
@@ -100,3 +100,22 @@ Japanese (日本語), Korean (한국어)
 ## Contact
 Submit an inquiry: https://www.aizjewelry.com/custom-jewelry-service
 Response within 2 business days.
+
+Product Detail Pages:
+  https://www.aizjewelry.com/products/custom-pearl-pendant-necklaces/
+  https://www.aizjewelry.com/products/custom-equestrian-pendant-necklaces/
+  https://www.aizjewelry.com/products/custom-cz-pendant-necklaces/
+  https://www.aizjewelry.com/products/custom-equestrian-stud-earrings/
+  https://www.aizjewelry.com/products/custom-stone-set-huggie-earrings/
+  https://www.aizjewelry.com/products/custom-animal-motif-huggie-earrings/
+  https://www.aizjewelry.com/products/custom-cz-huggie-earrings/
+  https://www.aizjewelry.com/products/custom-spike-hoop-earrings/
+  https://www.aizjewelry.com/products/custom-statement-silver-rings/
+  https://www.aizjewelry.com/products/custom-boutique-band-rings/
+  https://www.aizjewelry.com/products/custom-pearl-chain-bracelets/
+  https://www.aizjewelry.com/products/custom-equestrian-chain-bracelets/
+  https://www.aizjewelry.com/products/custom-waterproof-chain-bracelets/
+  https://www.aizjewelry.com/products/custom-adjustable-cord-bracelets/
+  https://www.aizjewelry.com/products/custom-stainless-steel-chain-bracelets/
+  https://www.aizjewelry.com/products/custom-solid-gold-band-rings/
+  https://www.aizjewelry.com/products/custom-solid-gold-huggie-earrings/
