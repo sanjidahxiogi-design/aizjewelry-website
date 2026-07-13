@@ -473,12 +473,73 @@
     <script src="script.js?v=30.3"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            document.documentElement.classList.add('catalog-enhanced');
+
             const materialButtons = document.querySelectorAll('[data-material-filter]');
             const categoryButtons = document.querySelectorAll('[data-category-filter]');
             const cards = document.querySelectorAll('.catalog-card');
             const count = document.getElementById('catalog-count-number');
             let activeMaterial = 'all';
             let activeCategory = 'all';
+
+            function splitSurfaceList(text) {
+                return text
+                    .split(/\s*\/\s*/)
+                    .map(function(item) { return item.trim(); })
+                    .filter(Boolean);
+            }
+
+            function enhanceCatalogCards() {
+                cards.forEach(function(card, index) {
+                    card.dataset.revealIndex = String(index);
+
+                    const label = card.querySelector('.catalog-material-label');
+                    if (label) {
+                        label.remove();
+                    }
+
+                    card.querySelectorAll('.catalog-specs > div').forEach(function(specBlock) {
+                        const dd = specBlock.querySelector('dd');
+                        if (!dd || dd.dataset.enhanced === 'true') return;
+
+                        const parts = splitSurfaceList(dd.textContent || '');
+                        const list = document.createElement('ul');
+                        list.className = 'surface-list';
+
+                        parts.forEach(function(part) {
+                            const li = document.createElement('li');
+                            li.textContent = part;
+                            list.appendChild(li);
+                        });
+
+                        dd.textContent = '';
+                        dd.appendChild(list);
+                        dd.dataset.enhanced = 'true';
+                    });
+                });
+            }
+
+            function revealCatalogCards() {
+                if (!('IntersectionObserver' in window)) {
+                    cards.forEach(function(card) { card.classList.add('visible'); });
+                    return;
+                }
+
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (!entry.isIntersecting) return;
+                        const delay = Number(entry.target.dataset.revealIndex || 0) * 70;
+                        setTimeout(function() {
+                            entry.target.classList.add('visible');
+                        }, delay);
+                        observer.unobserve(entry.target);
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+                cards.forEach(function(card) {
+                    observer.observe(card);
+                });
+            }
 
             function updateCatalog() {
                 let visible = 0;
@@ -527,6 +588,9 @@
             if (categoryParam && setActiveButton(categoryButtons, 'categoryFilter', categoryParam)) {
                 activeCategory = categoryParam;
             }
+
+            enhanceCatalogCards();
+            revealCatalogCards();
             updateCatalog();
         });
     </script>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -803,11 +803,20 @@
                     </div>
                     <div class="form-group">
                         <label>デザイン/参考資料をアップロード (最?0MB)</label>
-                        <div class="file-input-wrapper">
-                            <span class="custom-file-btn">ファイルを選?/span>
-                            <span class="file-name-display">ファイルが選択されていません</span>
-                            <input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx" class="file-input" onchange="updateFileName(this)">
+                                                <div class="upload-zone">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            <div class="upload-zone-copy">
+                                <p style="margin:8px 0 4px;color:#3a2e1e;font-weight:600;">Drag & drop files here, or click to select</p>
+                                <p style="margin:0;color:#8a7a65;font-size:0.82em;">Paste images with Ctrl+V · Any file type accepted</p>
+                            </div>
+                            <input type="file" name="attachment" id="fileInput" multiple style="display:none;">
                         </div>
+                        <div class="file-list"></div>
+                        <p class="multi-file-note" style="display:none;">To share multiple files, please send via WhatsApp or reply to our email after your inquiry is submitted.</p>
                     </div>
                     <button type="submit" class="btn primary">プロジェクト概要を送信</button>
                     <p style="font-size: 0.7rem; color: #888; text-align: center; margin-top: 20px;">厳格な機密保持を保証します。すべての問い合わせ?2時間以内に評価します?/p>

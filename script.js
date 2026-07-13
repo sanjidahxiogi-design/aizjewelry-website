@@ -141,7 +141,161 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function() {
         document.querySelectorAll('.lang-switcher').forEach(s => s.classList.remove('active'));
     });
+
+    // --- 4. Shared upload zones for inquiry forms ---
+    initUploadZones();
 });
+
+function initUploadZones() {
+    const zones = Array.from(document.querySelectorAll('.upload-zone'));
+    if (!zones.length) return;
+
+    let activeZone = zones[0];
+
+    function renderZone(zone) {
+        const fileInput = zone.querySelector('.file-input');
+        const fileList = zone.querySelector('.file-list');
+        const multiNote = zone.querySelector('.multi-file-note');
+        const state = zone._uploadState || { files: [] };
+        zone._uploadState = state;
+
+        if (fileList) {
+            fileList.innerHTML = '';
+            state.files.forEach(function(file, index) {
+                const item = document.createElement('div');
+                item.className = 'file-item';
+
+                const label = document.createElement('span');
+                label.className = 'file-item-label';
+                label.textContent = file.name;
+
+                const meta = document.createElement('span');
+                meta.className = 'file-item-meta';
+                meta.textContent = '(' + (file.size / 1024).toFixed(1) + ' KB)';
+
+                const textWrap = document.createElement('span');
+                textWrap.className = 'file-item-text';
+                textWrap.appendChild(document.createTextNode('File: '));
+                textWrap.appendChild(label);
+                textWrap.appendChild(document.createTextNode(' '));
+                textWrap.appendChild(meta);
+
+                const removeBtn = document.createElement('button');
+                removeBtn.type = 'button';
+                removeBtn.className = 'remove-btn';
+                removeBtn.setAttribute('aria-label', 'Remove file');
+                removeBtn.dataset.idx = String(index);
+                removeBtn.textContent = 'x';
+
+                item.appendChild(textWrap);
+                item.appendChild(removeBtn);
+                fileList.appendChild(item);
+            });
+        }
+
+        if (fileInput) {
+            if (state.files.length > 0) {
+                const dt = new DataTransfer();
+                dt.items.add(state.files[0]);
+                fileInput.files = dt.files;
+            } else {
+                fileInput.value = '';
+            }
+        }
+
+        if (multiNote) {
+            multiNote.style.display = state.files.length > 1 ? 'block' : 'none';
+        }
+
+        zone.classList.toggle('has-files', state.files.length > 0);
+    }
+
+    function addFiles(zone, incomingFiles) {
+        const state = zone._uploadState || { files: [] };
+        const nextFiles = Array.from(incomingFiles || []).filter(Boolean);
+        if (!nextFiles.length) return;
+        state.files = state.files.concat(nextFiles);
+        zone._uploadState = state;
+        renderZone(zone);
+    }
+
+    function getPasteFiles(event) {
+        const clipboard = event.clipboardData;
+        if (!clipboard || !clipboard.items) return [];
+        return Array.from(clipboard.items)
+            .filter(function(item) { return item.kind === 'file'; })
+            .map(function(item) { return item.getAsFile(); })
+            .filter(Boolean);
+    }
+
+    zones.forEach(function(zone) {
+        const fileInput = zone.querySelector('.file-input');
+        const fileList = zone.querySelector('.file-list');
+
+        zone.tabIndex = 0;
+        zone.setAttribute('role', 'button');
+        zone.setAttribute('aria-label', 'Upload attachments');
+
+        zone.addEventListener('click', function(event) {
+            if (event.target.closest('.remove-btn')) return;
+            if (event.target.closest('.file-list')) return;
+            activeZone = zone;
+            zone.focus();
+            if (fileInput) fileInput.click();
+        });
+
+        zone.addEventListener('focusin', function() {
+            activeZone = zone;
+        });
+
+        if (fileInput) {
+            fileInput.addEventListener('change', function() {
+                addFiles(zone, fileInput.files);
+            });
+        }
+
+        zone.addEventListener('dragover', function(event) {
+            event.preventDefault();
+            zone.classList.add('drag-over');
+            activeZone = zone;
+        });
+
+        zone.addEventListener('dragleave', function() {
+            zone.classList.remove('drag-over');
+        });
+
+        zone.addEventListener('drop', function(event) {
+            event.preventDefault();
+            zone.classList.remove('drag-over');
+            activeZone = zone;
+            addFiles(zone, event.dataTransfer && event.dataTransfer.files);
+        });
+
+        if (fileList) {
+            fileList.addEventListener('click', function(event) {
+                const button = event.target.closest('.remove-btn');
+                if (!button) return;
+                const state = zone._uploadState || { files: [] };
+                const index = Number(button.dataset.idx);
+                if (Number.isNaN(index)) return;
+                state.files.splice(index, 1);
+                zone._uploadState = state;
+                renderZone(zone);
+            });
+        }
+
+        renderZone(zone);
+    });
+
+    document.addEventListener('paste', function(event) {
+        const files = getPasteFiles(event);
+        if (!files.length) return;
+        const focusedZone = activeZone && activeZone.contains(document.activeElement) ? activeZone : null;
+        const zone = focusedZone || (document.activeElement && document.activeElement.closest ? document.activeElement.closest('.upload-zone') : null);
+        if (!zone) return;
+        addFiles(zone, files);
+    });
+}
 
 // --- 4. 文件上传显示辅助函数 ---
 function updateFileName(input) {
