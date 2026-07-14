@@ -43,7 +43,7 @@ def force_upload_product(folder, t):
         html = html.replace('<div class="product-card" data-category="earrings">', new_item + '\n                    <div class="product-card" data-category="earrings">')
 
     # 强制刷新缓存版本号
-    html = html.replace('style.css?v=20.0', 'style.css?v=30.1')
+    html = html.replace('style.css?v=20260714-4', 'style.css?v=20260714-4')
     html = html.replace('script.js?v=2.1', 'script.js?v=30.1')
 
     with open(path, 'w', encoding='utf-8') as f:

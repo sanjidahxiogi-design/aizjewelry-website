@@ -14,7 +14,7 @@ configs = {
 
 def extreme_physical_rewrite(folder, c):
     target_path = os.path.join(base_dir, folder, "contact.html")
-    css_ref = "style.css?v=6.0" if folder == "." else "../style.css?v=6.0"
+    css_ref = "style.css?v=20260714-4" if folder == "." else "../style.css?v=20260714-4"
     
     html = f"""<!DOCTYPE html>
 <html lang="{c['lang']}">

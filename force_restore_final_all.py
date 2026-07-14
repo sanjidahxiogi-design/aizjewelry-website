@@ -17,7 +17,7 @@ def force_restore_all(folder, c):
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{c['title']} - Aiz Jewelry</title>
-    <link rel="stylesheet" href="../style.css?v=2.2">
+    <link rel="stylesheet" href="../style.css?v=20260714-4">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>main {{ padding-top: 140px; padding-bottom: 100px; min-height: 80vh; display: flex; align-items: center; }} .thank-you-inline {{ display: none; text-align: center; padding: 60px 20px; }} .thank-you-inline.visible {{ display: block !important; }}</style>
 </head>
