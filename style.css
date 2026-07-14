@@ -2823,6 +2823,10 @@ footer p {
     padding-top: 150px;
 }
 
+body.products-page main {
+    padding-bottom: 140px;
+}
+
 .catalog-material-tabs {
     position: sticky;
     top: 64px;
