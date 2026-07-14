@@ -3622,7 +3622,7 @@ footer p {
 }
 
 .product-floating-actions {
-    bottom: 80px;
+    bottom: 24px;
     left: 0;
     pointer-events: none;
     position: fixed;
@@ -3647,9 +3647,9 @@ footer p {
     box-shadow: 0 18px 34px rgba(37, 211, 102, 0.28);
     color: #fff;
     display: inline-flex;
-    gap: 10px;
+    gap: 8px;
     pointer-events: auto;
-    padding: 14px 20px;
+    padding: 10px 16px;
     text-decoration: none;
     transition: transform 0.25s ease, background 0.25s ease;
 }
@@ -3665,16 +3665,16 @@ footer p {
 }
 
 .product-float img {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1rem;
+    height: 1rem;
     flex-shrink: 0;
     display: block;
 }
 
 .product-float span {
-    font-size: 0.76rem;
+    font-size: 0.72rem;
     font-weight: 800;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
