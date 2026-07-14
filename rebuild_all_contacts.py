@@ -49,8 +49,10 @@ def rebuild_contact_page(lang_dir, info):
 
     <div class="floating-actions">
         <button onclick="scrollToTop()" id="back-to-top" class="back-to-top-float">
-            <svg viewBox="0 0 448 512"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L256 161.3V464c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V161.3L53.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
-        </button>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="18 15 12 9 6 15"/>
+</svg>
+</button>
     </div>
 
     <script src="../script.js"></script>
