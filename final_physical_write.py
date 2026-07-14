@@ -15,7 +15,7 @@ configs = {
 
 def write_fixed_html(folder, c):
     path = os.path.join(base_dir, folder, "contact.html")
-    css = "style.css?v=20260714-4" if folder == "" else "../style.css?v=20260714-4"
+    css = "style.css?v=20260714-6" if folder == "" else "../style.css?v=20260714-6"
     
     html = f"""<!DOCTYPE html>
 <html lang="{c['lang']}">

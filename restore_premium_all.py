@@ -18,7 +18,7 @@ def force_write_premium_contact(folder, c):
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{c['title']} - Aiz Jewelry</title>
-    <link rel="stylesheet" href="../style.css?v=20260714-4">
+    <link rel="stylesheet" href="../style.css?v=20260714-6">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>main {{ padding-top: 140px; padding-bottom: 80px; min-height: 80vh; display: flex; align-items: center; }} .thank-you-inline {{ display: none; text-align: center; padding: 60px 20px; }} .back-home-btn-premium {{ display: inline-block; padding: 12px 35px; border: 1px solid #111; color: #111; text-decoration: none; font-weight: 700; letter-spacing: 1px; margin-top: 30px; text-transform: uppercase; }} .back-home-btn-premium:hover {{ background: #111; color: #fff; }}</style>
 </head>

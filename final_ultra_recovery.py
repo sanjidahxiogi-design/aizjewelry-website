@@ -19,7 +19,7 @@ def extreme_write_contact(folder, c):
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{c['title']} - Aiz Jewelry</title>
-    <link rel="stylesheet" href="../style.css?v=20260714-4">
+    <link rel="stylesheet" href="../style.css?v=20260714-6">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>main {{ padding-top: 140px; padding-bottom: 100px; min-height: 80vh; display: flex; align-items: center; }} .thank-you-inline {{ display: none; text-align: center; }} .thank-you-inline.visible {{ display: block !important; }}</style>
 </head>
