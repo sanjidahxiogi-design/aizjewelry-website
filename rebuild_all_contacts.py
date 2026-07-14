@@ -49,7 +49,7 @@ def rebuild_contact_page(lang_dir, info):
 
     <div class="floating-actions">
         <button onclick="scrollToTop()" id="back-to-top" class="back-to-top-float">
-<img src="/images/back-to-top.png?v=20260714-5" alt="Back to top">
+<img src="/images/back-to-top.png?v=20260714-6" alt="Back to top">
 </button>
     </div>
 
